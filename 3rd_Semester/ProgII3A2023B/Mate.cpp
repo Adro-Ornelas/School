@@ -35,6 +35,15 @@ double Mate::AreaCilindro(double h, double r){
     return 2 * M_PI * r * (h + r);
 }
 
+bool Mate::Divisible9(int number){
+    int suma=0;
+    while(number > 0){
+        suma += number % 10;
+        number /= 10;
+    }
+    return (suma % 9 == 0) ? true:false;
+}
+
 double Mate::SeriePi(){
     int signo = -1;
     double pi = 4;

@@ -410,13 +410,24 @@ int main(int argc, char** argv) {
     Mate myM;
     double promedio = myM.PromedioHasta0();
     printf("El promedio es: %lf", promedio);
-    */
     
     // Boliche
     Games myGame;
     int puntos = myGame.Boliche();
     printf("El total de puntos fue %d", puntos);
+    */
     
+    // Divisible entre 9
+    Mate Math;
+    int numb;
+    printf("Escribe un número para saber si es divisble entre 9: ");
+    fflush(stdout);
+    scanf("%d", &numb);
+    if(Math.Divisible9(numb)) 
+        printf("%d SÍ es divisible entre 9", numb);
+    else
+        printf("%d NO es divisible entre 9", numb);
+        
     return 0;
      
 }

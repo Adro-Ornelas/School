@@ -17,7 +17,7 @@ int Games::Boliche(){
             ++chuzas_count;
             if(chuza_spair > 0){
                 if(chuzas_count >= 3)
-                    // Para 3 o más chuzas seguidas:
+                    // Para 2 o más chuzas seguidas:
                     total_puntos += tiro1 * 3;
                 else  // Para 1 y dos chuzas anteriores:
                 total_puntos += tiro1 * 2;
@@ -26,17 +26,17 @@ int Games::Boliche(){
             } else {
                 total_puntos += tiro1;
             }
-            chuza_spair = 2;
+            chuza_spair = 2;    // Serán contados los sig. dos tiros
         } else {
             if(chuza_spair > 0){
                 if(chuzas_count >= 3)
-                    // Para 3 o más chuzas seguidas:
+                    // Para 2 o más chuzas seguidas:
                     total_puntos += tiro1 * 3;
                 else  // Para 1 y dos chuzas anteriores:
                 total_puntos += tiro1 * 2;
                 
                 --chuza_spair;
-                chuzas_count = 0;
+                chuzas_count = 0;   // Rompe racha de chuzas
             } else {
                 total_puntos += tiro1;
                 
@@ -55,7 +55,6 @@ int Games::Boliche(){
             
             if(tiro1 + tiro2 == 10)
                 chuza_spair = 1;
-            
         }
     }
    

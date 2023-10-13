@@ -5,7 +5,7 @@ class Mate {
     public:
         void AdivinaMiNum(int, int);
         double AreaCilindro(double, double);
-        
+        bool Divisible9(int number);
         double SeriePi();
         void EstadisticosCiclo(int nDatos, int* mayor, int* menor, int* suma,
                                double* promedio);
