@@ -54,6 +54,13 @@ double Mate::SeriePi(){
     return pi;
 }
 
+void Mate::SumaYMediaDe200(int* suma, double* media){
+    for(int i = 1; i <= 200; ++i){
+        *suma = *suma + i;
+    }
+    *media = (double)*suma / 200; 
+}
+
 void Mate::Factores(int num){
     for(int cactor = 1; cactor <= num; ++cactor){
         if(!(num % cactor)){

@@ -74,3 +74,55 @@ int Games::Boliche(){
     return total_puntos;
 }
 
+int Games::Balero(){
+    int tipo_tiro;
+    int total = 0;
+    for(int i = 1; i <= 20; ++i){
+        printf("\nTiro %d:", i);
+        tipo_tiro = TipoDeTiroBalero();
+        int acertado;
+        printf("¿Fue acertado? (1) SÍ (0) NO: ");
+        fflush(stdout);
+        scanf("%d", &acertado);
+        if(acertado){
+            switch(tipo_tiro){
+                case 1: total += 1;
+                break;
+                case 2: total += 5;
+                break;
+                case 3: 
+                case 4: total += 10;
+                break;
+                case 5: total += 50;
+                break;
+                case 6: total += 100;
+                break;
+                case 7: total += 250;
+                break;
+                case 8: total += 500;
+                break;
+            }
+        }
+    }
+    return total;
+}
+
+int Games::TipoDeTiroBalero(){
+    int tipo;
+    printf("\n"
+           "1) Sencillo\n"
+           "2) Capirucho sencillo\n"
+           "3) Clásico\n"
+           "4) Capirucho complicado\n"
+           "5) Cruzado\n"
+           "6) Revés\n"
+           "7) Jalón\n"
+           "8) Invertido");
+    do{
+    printf("\nSeleccione el tipo de tiro (1-8): ");
+    fflush(stdout);
+    scanf("%d", &tipo);
+    } while(tipo > 8 || tipo < 1);
+    return tipo;
+}
+

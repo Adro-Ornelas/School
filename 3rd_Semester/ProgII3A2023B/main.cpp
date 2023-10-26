@@ -415,7 +415,6 @@ int main(int argc, char** argv) {
     Games myGame;
     int puntos = myGame.Boliche();
     printf("El total de puntos fue %d", puntos);
-    */
     
     // Divisible entre 9
     Mate Math;
@@ -427,7 +426,19 @@ int main(int argc, char** argv) {
         printf("%d SÍ es divisible entre 9", numb);
     else
         printf("%d NO es divisible entre 9", numb);
-        
+
+    // SumaYMediaDe200
+    Mate myMath;
+    int suma = 0;
+    double media = 0;
+    myMath.SumaYMediaDe200(&suma, &media);
+    printf("La suma de 1-200 es: %d, mientras que la media es: %.2lf", suma, media);
+    */
+    
+    Games myGame;
+    int total_puntos = myGame.Balero();
+    printf("El total de puntos fue: %d", total_puntos);
+    
     return 0;
      
 }

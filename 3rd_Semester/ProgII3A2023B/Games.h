@@ -4,6 +4,8 @@
 class Games {
 public:
     int Boliche();
+    int Balero();
+    int TipoDeTiroBalero();
 
 };
 

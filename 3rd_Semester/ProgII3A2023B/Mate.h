@@ -7,6 +7,7 @@ class Mate {
         double AreaCilindro(double, double);
         bool Divisible9(int number);
         double SeriePi();
+        void SumaYMediaDe200(int*, double*);
         void EstadisticosCiclo(int nDatos, int* mayor, int* menor, int* suma,
                                double* promedio);
         void Factores(int num);
