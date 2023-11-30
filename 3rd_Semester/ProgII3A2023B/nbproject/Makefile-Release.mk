@@ -35,6 +35,8 @@ OBJECTDIR=${CND_BUILDDIR}/${CND_CONF}/${CND_PLATFORM}
 
 # Object Files
 OBJECTFILES= \
+	${OBJECTDIR}/ArreglosNumericos.o \
+	${OBJECTDIR}/CadenasChars.o \
 	${OBJECTDIR}/Chars.o \
 	${OBJECTDIR}/Conversiones.o \
 	${OBJECTDIR}/Escuela.o \
@@ -45,6 +47,7 @@ OBJECTFILES= \
 	${OBJECTDIR}/Mate.o \
 	${OBJECTDIR}/Negocios.o \
 	${OBJECTDIR}/Nutrition.o \
+	${OBJECTDIR}/Poker.o \
 	${OBJECTDIR}/main.o
 
 
@@ -71,6 +74,16 @@ LDLIBSOPTIONS=
 ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/progii3a2023b.exe: ${OBJECTFILES}
 	${MKDIR} -p ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}
 	${LINK.cc} -o ${CND_DISTDIR}/${CND_CONF}/${CND_PLATFORM}/progii3a2023b ${OBJECTFILES} ${LDLIBSOPTIONS}
+
+${OBJECTDIR}/ArreglosNumericos.o: ArreglosNumericos.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/ArreglosNumericos.o ArreglosNumericos.cpp
+
+${OBJECTDIR}/CadenasChars.o: CadenasChars.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/CadenasChars.o CadenasChars.cpp
 
 ${OBJECTDIR}/Chars.o: Chars.cpp
 	${MKDIR} -p ${OBJECTDIR}
@@ -121,6 +134,11 @@ ${OBJECTDIR}/Nutrition.o: Nutrition.cpp
 	${MKDIR} -p ${OBJECTDIR}
 	${RM} "$@.d"
 	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Nutrition.o Nutrition.cpp
+
+${OBJECTDIR}/Poker.o: Poker.cpp
+	${MKDIR} -p ${OBJECTDIR}
+	${RM} "$@.d"
+	$(COMPILE.cc) -O2 -MMD -MP -MF "$@.d" -o ${OBJECTDIR}/Poker.o Poker.cpp
 
 ${OBJECTDIR}/main.o: main.cpp
 	${MKDIR} -p ${OBJECTDIR}

@@ -2,13 +2,18 @@
 #include "Conversiones.h"
 #include "Fechas.h"
 #include "Mate.h"
+#include "Examenes.h"
 #include "Negocios.h"
 #include "Nutrition.h"
 #include "Fisica.h"
 #include "Chars.h"
 #include "Escuela.h"
 #include "Games.h"
+#include "ArreglosNumericos.h"
+#include "CadenasChars.h"
+#include "Poker.h"
 #include <stdlib.h>
+#include <stdio.h>
 #include <time.h>
 
 int main(int argc, char** argv) {
@@ -433,12 +438,127 @@ int main(int argc, char** argv) {
     double media = 0;
     myMath.SumaYMediaDe200(&suma, &media);
     printf("La suma de 1-200 es: %d, mientras que la media es: %.2lf", suma, media);
-    */
+    
     
     Games myGame;
     int total_puntos = myGame.Balero();
     printf("El total de puntos fue: %d", total_puntos);
     
+    Examenes myExam;
+    myExam.DistintosCero();
+    
+    
+    // El constructor lo ejecuta el OS
+    ArreglosNumericos an;
+    an.Despliega();
+    int dif_mayor = an.DifConsecutivos();
+    printf("La diferencia mayor es: %d", dif_mayor);
+    
+    ArreglosNumericos an(true);
+    an.Despliega();
+    int mayor, segundo_mayor;
+    an.DosMayores(&mayor, &segundo_mayor);
+    printf("El mayor es: %d\n"
+           "El segundo mayor es: %d", mayor, segundo_mayor);
+    
+    
+    ArreglosNumericos an(false);
+    an.CorreDados();
+    
+    // Factores y arreglos:
+    ArreglosNumericos an(false);
+    int num, tam;
+    int arr[100] = {0};
+   
+    printf("Escriba el valor a sacar factores: ");
+    fflush(stdout);
+    scanf("%d", &num);
+    tam = an.FactoresArr(num, arr);
+    an.DespliegaFactores(arr, tam, num);
+    
+    ArreglosNumericos n(false);
+    int taman;
+    float mediana;
+    printf("Escribe el tamaño del arreglo:");
+    fflush(stdout);
+    scanf("%d", &taman);
+    int arreglito[taman];
+    
+    n.FillArregloOrder(arreglito, 1, taman);
+    
+    mediana = n.Mediana(arreglito, taman);
+    
+    n.DespliegaArr(arreglito, taman);
+    
+    printf("La mediana es: %f", mediana);
+    
+    // Minúsculas a mayúsculas
+    CadenasChars Chars;
+    char cad[100];
+    printf("Dame una frase: ");
+    fflush(stdout);
+    fgets(cad, 100, stdin);
+    Chars.CadToAtlas(cad);
+    printf("%d", strlen(cad));
+    
+    // Contar minusculas
+    CadenasChars Chars;
+    char cad[100];
+    int numChar;
+    printf("Dame una frase: ");
+    fflush(stdout);
+    fgets(cad, 100, stdin);
+    numChar = Chars.NumMinus(cad);
+    printf("La cadena tiene %d  minúsculas", numChar);
+    
+    CadenasChars Chars;
+    char cad[100];
+    printf("Escribe una cadena a invertir: ");
+    fflush(stdout);
+    fgets(cad, 100, stdin);
+    Chars.Invierte(cad);
+    printf("La cadena es: %s", cad);
+    
+    
+    CadenasChars Chars;
+    char cad[100];
+    printf("Escribe una cadena a contar palabras: ");
+    fflush(stdout);
+    fgets(cad, 100, stdin);
+    int numpal = Chars.NumPalabras(cad);
+    printf("La cadena tiene %d palabras", numpal);
+    
+    
+    CadenasChars Chars;
+    char cad[100];
+    printf("Escribe una cadena a contar vocales: ");
+    fflush(stdout);
+    fgets(cad, 100, stdin);
+    int numvocal = Chars.NumVocales(cad);
+    printf("La cadena tiene %d vocales", numvocal);
+    */
+    
+    Poker miPoker;
+    //miPoker.PrintMazo();
+    printf("\n\n");
+    miPoker.Barajar();
+    miPoker.PrintMazo();
+    miPoker.RepartoInicial();
+    miPoker.PruebaMano();
+    miPoker.DespliegaManosss();
+    miPoker.EvaluaManos();
+    
+       
+    /*
+    for(int i = 0; i < JUGADORES; ++i)
+        if(miPoker.EsPar(i, &valorPar)){
+            printf("JUGADOR %d tiene par de ", i+1);
+            miPoker.DespliegaValor(valorPar);
+            printf("\n");
+        }else
+            printf("JUGADOR %d no tiene par\n", i+1);
+    
+     */ 
     return 0;
      
 }
