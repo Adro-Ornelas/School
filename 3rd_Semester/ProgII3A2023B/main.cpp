@@ -545,20 +545,11 @@ int main(int argc, char** argv) {
     miPoker.PrintMazo();
     miPoker.RepartoInicial();
     miPoker.PruebaMano();
+    miPoker.OrdenarManos();
     miPoker.DespliegaManosss();
     miPoker.EvaluaManos();
-    
-       
-    /*
-    for(int i = 0; i < JUGADORES; ++i)
-        if(miPoker.EsPar(i, &valorPar)){
-            printf("JUGADOR %d tiene par de ", i+1);
-            miPoker.DespliegaValor(valorPar);
-            printf("\n");
-        }else
-            printf("JUGADOR %d no tiene par\n", i+1);
-    
-     */ 
+    printf("\n\n");
+    miPoker.DespliegaValor(45);
     return 0;
      
 }

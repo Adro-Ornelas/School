@@ -1,7 +1,7 @@
 #ifndef POKER_H
 #define POKER_H
 
-#define BARAJAS 1
+#define BARAJAS 6
 #define MANO_TAM 5 
 #define JUGADORES 4
 
@@ -23,6 +23,9 @@ public:
     void DespliegaPalo(int carta);
     void DespliegaValor(int carta);
     void NuevaMano(int jugador);
+    void Swap(int* val1, int* val2);
+    void OrdenarManos();        // Menor a mayor
+    
     void RepartoInicial();
     int  Palo(int carta);
     void PruebaMano();
