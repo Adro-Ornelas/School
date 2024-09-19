@@ -1,0 +1,3 @@
+build/Debug/MinGW-Windows/LSLTNIVCNC.o: LSLTNIVCNC.cpp LSLTNIVCNC.h
+
+LSLTNIVCNC.h:
