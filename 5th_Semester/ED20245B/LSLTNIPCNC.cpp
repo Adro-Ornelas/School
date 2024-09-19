@@ -48,6 +48,7 @@ bool LSLTNIPCNC::eliminar(int *dato, int pos){
     if(miPos != pos || esVacia()) // Posición inválida
         return false;
     
+    *dato = pTmp->dato;
     pOld->pNext = pTmp->pNext;
     
     free(pTmp); // Libero nodo

@@ -45,8 +45,7 @@ int main(int argc, char** argv) {
     */
     
     // LSLCIRCIPCNC list;
-    LSLTNIPCNC list;
-    LSLCIRCIPCNC l;
+    LSLTNIPCNC l;
     l.insertar(7,1); // vacia
     l.despliega();
     l.insertar(15,1); // inicio
