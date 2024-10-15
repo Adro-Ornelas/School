@@ -12,7 +12,7 @@
 using namespace std;
 
 LSLCIRCIPCNC::LSLCIRCIPCNC() {
-    p = (struct Nodo*)malloc(sizeof(Nodo));
+    p = (struct Nodo*)malloc(sizeof(struct Nodo));
     p->pNext = p;
 }
 
@@ -26,7 +26,8 @@ int  LSLCIRCIPCNC::cardinalidad(){
             ++cuantos;
     return cuantos;
 }
-void LSLCIRCIPCNC::despliega(){
+void LSLCIRCIPCNC::despliega()
+{
     for(struct Nodo *tmp = p->pNext; tmp != p; tmp = tmp->pNext)
             cout << tmp->dato << '\t';
     cout << endl;
@@ -63,6 +64,7 @@ bool LSLCIRCIPCNC::insertar(int dato, int pos){
     if(pNue == NULL) return false;
     
     pNue->dato = dato;
+    
     struct Nodo *pOld = p,
                 *pTmp = p->pNext;
     

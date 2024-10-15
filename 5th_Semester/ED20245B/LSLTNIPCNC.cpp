@@ -91,7 +91,6 @@ bool LSLTNIPCNC::insertar(int dato, int pos){
     
     // Inserto nuevo nodo
     pOld->pNext = pNue;
-    pNue->pNext = pTmp;
-    
+    pNue->pNext = pTmp;   
 }
 

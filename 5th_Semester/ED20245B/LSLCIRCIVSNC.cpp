@@ -25,8 +25,9 @@ void LSLCIRCIVSNC::despliega(){
             std::cout << ptmp->dato << '\t';
             ptmp = ptmp->pNext;
         }while(ptmp != p);
-        std::cout << std::endl;
     }
+    
+    std::cout << std::endl;
 }
 
 int  LSLCIRCIVSNC::cardinalidad(){

@@ -16,12 +16,12 @@ protected:
 public:
     LSLCIRCIVSNC();
     ~LSLCIRCIVSNC();
-    bool eliminar(int dato);
-    bool insertar(int dato);
     int  cardinalidad();
+    void despliega();
+    bool eliminar(int dato);
     bool esElemento(int dato);
     bool esVacia();
-    void despliega();
+    bool insertar(int dato);    
 };
 
 #endif /* LSLCIRCIVSNC_H */

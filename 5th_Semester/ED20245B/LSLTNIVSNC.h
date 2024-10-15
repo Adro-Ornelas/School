@@ -20,12 +20,13 @@ protected:
 public:
     LSLTNIVSNC();
     ~LSLTNIVSNC();
-    bool eliminar(int dato);
-    bool insertar(int dato);
-    bool esElemento(int dato);
     int  cardinalidad(); // Cuantos nodos
-    bool esVacia();
     void despliega();
+    bool eliminar(int dato);
+    bool esElemento(int dato);
+    bool esVacia();
+    bool insertar(int dato);
+    
 private:
 
 };

@@ -4,9 +4,16 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>LDLCIRCIPCNC.h</itemPath>
+      <itemPath>LDLCIRCIVSNC.h</itemPath>
+      <itemPath>LDLTNIPSNC.h</itemPath>
       <itemPath>LSLCIRCIPCNC.h</itemPath>
+      <itemPath>LSLCIRCIPSNC.h</itemPath>
+      <itemPath>LSLCIRCIVCNC.h</itemPath>
       <itemPath>LSLCIRCIVSNC.h</itemPath>
       <itemPath>LSLTNIPCNC.h</itemPath>
+      <itemPath>LSLTNIPSNC.h</itemPath>
+      <itemPath>LSLTNIVCNC.h</itemPath>
       <itemPath>LSLTNIVSNC.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
@@ -16,9 +23,16 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>LDLCIRCIPCNC.cpp</itemPath>
+      <itemPath>LDLCIRCIVSNC.cpp</itemPath>
+      <itemPath>LDLTNIPSNC.cpp</itemPath>
       <itemPath>LSLCIRCIPCNC.cpp</itemPath>
+      <itemPath>LSLCIRCIPSNC.cpp</itemPath>
+      <itemPath>LSLCIRCIVCNC.cpp</itemPath>
       <itemPath>LSLCIRCIVSNC.cpp</itemPath>
       <itemPath>LSLTNIPCNC.cpp</itemPath>
+      <itemPath>LSLTNIPSNC.cpp</itemPath>
+      <itemPath>LSLTNIVCNC.cpp</itemPath>
       <itemPath>LSLTNIVSNC.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
@@ -44,9 +58,29 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="LDLCIRCIPCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLCIRCIPCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLCIRCIVSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLCIRCIVSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLTNIPSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLTNIPSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="LSLCIRCIPCNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LSLCIRCIPCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LSLCIRCIPSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LSLCIRCIPSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LSLCIRCIVCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LSLCIRCIVCNC.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="LSLCIRCIVSNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -55,6 +89,14 @@
       <item path="LSLTNIPCNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LSLTNIPCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LSLTNIPSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LSLTNIPSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LSLTNIVCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LSLTNIVCNC.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="LSLTNIVSNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -83,9 +125,29 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="LDLCIRCIPCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLCIRCIPCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLCIRCIVSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLCIRCIVSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLTNIPSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLTNIPSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="LSLCIRCIPCNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LSLCIRCIPCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LSLCIRCIPSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LSLCIRCIPSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LSLCIRCIVCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LSLCIRCIVCNC.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="LSLCIRCIVSNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -94,6 +156,14 @@
       <item path="LSLTNIPCNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LSLTNIPCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LSLTNIPSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LSLTNIPSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LSLTNIVCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LSLTNIVCNC.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="LSLTNIVSNC.cpp" ex="false" tool="1" flavor2="0">
       </item>

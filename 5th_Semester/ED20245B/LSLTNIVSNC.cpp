@@ -27,7 +27,30 @@ void LSLTNIVSNC::despliega()
 }
 
 bool LSLTNIVSNC::eliminar(int dato){
-    return true;    // stub (falta pero debo probar)
+    
+    if(esVacia())
+        return false;
+    
+    struct Nodo *pOld, *pTmp;
+    pOld = pTmp = p;           
+    for( ; pTmp != NULL; pTmp = pTmp->pNext){
+        if(pTmp->dato == dato)
+            break;
+        pOld = pTmp;
+    }
+    
+    if(pTmp == NULL || pTmp->dato != dato)
+        return false;
+    
+    if(pTmp == p)   // Si elimina 1era posicion
+        p = pTmp->pNext;
+    else
+        pOld->pNext = pTmp->pNext;
+    
+    
+    free(pTmp);
+    
+    return true;    
 }
 
 bool LSLTNIVSNC::insertar(int dato){
@@ -62,15 +85,16 @@ bool LSLTNIVSNC::insertar(int dato){
     return true;
 }
 
-bool LSLTNIVSNC::esElemento(int dato)
-{
+bool LSLTNIVSNC::esElemento(int dato) {
+    
     for(struct Nodo* pTmp = p; pTmp != NULL; pTmp = pTmp->pNext)
-        if(dato == pTmp->dato) return true;
+        if(dato == pTmp->dato)
+            return true;
     return false;
 }
 
-int  LSLTNIVSNC::cardinalidad()
-{ // Cuantos nodos
+int  LSLTNIVSNC::cardinalidad() { // Cuantos nodos
+    
     int ndatos = 0;
     for(struct Nodo* pTmp = p; pTmp != NULL; pTmp = pTmp->pNext)
         ++ndatos;
@@ -79,7 +103,7 @@ int  LSLTNIVSNC::cardinalidad()
 
 bool LSLTNIVSNC::esVacia()
 {
-    return (p == NULL) ? true:false;
+    return (p == NULL);
 }
 
 

@@ -14,7 +14,7 @@ class LSLCIRCIPCNC : public LSLTNIVSNC {
 public:
     LSLCIRCIPCNC();
     virtual ~LSLCIRCIPCNC();
-    int  cardinalidad(); // Cuantos nodos
+    int  cardinalidad();
     void despliega();
     bool eliminar(int *dato, int pos);
     bool esElemento(int dato);
