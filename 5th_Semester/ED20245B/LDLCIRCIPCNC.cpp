@@ -23,40 +23,39 @@ LDLCIRCIPCNC::~LDLCIRCIPCNC() {
 
 int  LDLCIRCIPCNC::cardinalidad(){
     int cuantos = 0;
-    for(struct NodoD *tmp = p->pder; tmp != p; tmp = tmp->pder)
+    for(struct NodoD *ptmp = p->pder; ptmp != p; ptmp = ptmp->pder)
             ++cuantos;
     return cuantos;
 }
-void LDLCIRCIPCNC::despliega()
-{
-    for(struct NodoD *tmp = p->pder; tmp != p; tmp = tmp->pder)
-            cout << tmp->dato << '\t';
+void LDLCIRCIPCNC::despliega() {
+    for(struct NodoD *ptmp = p->pder; ptmp != p; ptmp = ptmp->pder)
+            cout << ptmp->dato << '\t';
     cout << endl;
 }
 bool LDLCIRCIPCNC::eliminar(int *dato, int pos){
     
-    struct NodoD *pTmp = p->pder;
+    struct NodoD *ptmp = p->pder;
     
     int miPos = 1;
-    for(;miPos < pos && pTmp != p; ++miPos)
-        pTmp = pTmp->pder;     
+    for(;miPos < pos && ptmp != p; ++miPos)
+        ptmp = ptmp->pder;     
 
-    if(miPos != pos || pTmp == p)
+    if(miPos != pos || ptmp == p)
         return false;
     
-    *dato = pTmp->dato;
+    *dato = ptmp->dato;
     
     // Lista deje de apuntar a nodo
-    pTmp->pizq->pder = pTmp->pder; // Que nodo anterior apunte al siguiente
-    pTmp->pder->pizq = pTmp->pizq; // Que nodo siguiente apunte al anterior
+    ptmp->pizq->pder = ptmp->pder; // Que nodo anterior apunte al siguiente
+    ptmp->pder->pizq = ptmp->pizq; // Que nodo siguiente apunte al anterior
     
-    free(pTmp);
+    free(ptmp);
     
     return true;
 }
 bool LDLCIRCIPCNC::esElemento(int dato){
-    for(struct NodoD *tmp = p->pder; tmp != p; tmp = tmp->pder)
-        if(tmp->dato == dato)
+    for(struct NodoD *ptmp = p->pder; ptmp != p; ptmp = ptmp->pder)
+        if(ptmp->dato == dato)
             return true;
     return false;
 }
@@ -71,11 +70,11 @@ bool LDLCIRCIPCNC::insertar(int dato, int pos){
         return false;
     pNue->dato = dato;
     
-    struct NodoD *pTmp = p->pder;
+    struct NodoD *ptmp = p->pder;
     
     int miPos = 1;
-    for(;miPos < pos && pTmp != p; ++miPos){
-        pTmp = pTmp->pder;        
+    for(;miPos < pos && ptmp != p; ++miPos){
+        ptmp = ptmp->pder;        
     }
     
     if(miPos != pos){
@@ -84,12 +83,12 @@ bool LDLCIRCIPCNC::insertar(int dato, int pos){
     }
     
     // Que nodo apunte a la lista
-    pNue->pizq = pTmp->pizq;
-    pNue->pder = pTmp;
+    pNue->pizq = ptmp->pizq;
+    pNue->pder = ptmp;
     
     // Que lista apunte a nodo
-    pTmp->pizq->pder = pNue;
-    pTmp->pizq = pNue;
+    ptmp->pizq->pder = pNue;
+    ptmp->pizq = pNue;
     
     return true;
        

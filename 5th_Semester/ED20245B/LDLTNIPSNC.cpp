@@ -5,9 +5,10 @@
  * Created on 4 de octubre de 2024, 01:23 PM
  */
 
+#include "LDLTNIPSNC.h"
+
 #include <iostream>
 #include <stdlib.h>
-#include "LDLTNIPSNC.h"
 
 using namespace std;
 
@@ -31,7 +32,6 @@ void LDLTNIPSNC::despliega() {
     for(struct NodoD *ptmp = p; ptmp != NULL; ptmp = ptmp->pder)
         cout << ptmp->dato << '\t';
     cout << endl;
-
 }
 bool LDLTNIPSNC::eliminar(int *dato, int pos){
 
@@ -56,6 +56,7 @@ bool LDLTNIPSNC::eliminar(int *dato, int pos){
     
     if(miPos != pos)   // Posicion invalida
         return false;
+    
     
     *dato = ptmp->dato; // Guarda dato a eliminar
     
@@ -87,7 +88,7 @@ bool LDLTNIPSNC::insertar(int dato, int pos){
     if(1 == pos) {
         
         pNue->pizq = NULL;
-        pNue->pder  = p;
+        pNue->pder = p;
         if(!esVacia()) 
             p->pizq = pNue;
         p = pNue;

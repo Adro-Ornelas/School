@@ -4,9 +4,15 @@
     <logicalFolder name="HeaderFiles"
                    displayName="Header Files"
                    projectFiles="true">
+      <itemPath>ABB.h</itemPath>
       <itemPath>LDLCIRCIPCNC.h</itemPath>
+      <itemPath>LDLCIRCIPSNC.h</itemPath>
+      <itemPath>LDLCIRCIVCNC.h</itemPath>
       <itemPath>LDLCIRCIVSNC.h</itemPath>
+      <itemPath>LDLTNIPCNC.h</itemPath>
       <itemPath>LDLTNIPSNC.h</itemPath>
+      <itemPath>LDLTNIVCNC.h</itemPath>
+      <itemPath>LDLTNIVSNC.h</itemPath>
       <itemPath>LSLCIRCIPCNC.h</itemPath>
       <itemPath>LSLCIRCIPSNC.h</itemPath>
       <itemPath>LSLCIRCIVCNC.h</itemPath>
@@ -15,6 +21,7 @@
       <itemPath>LSLTNIPSNC.h</itemPath>
       <itemPath>LSLTNIVCNC.h</itemPath>
       <itemPath>LSLTNIVSNC.h</itemPath>
+      <itemPath>Recursividad.h</itemPath>
     </logicalFolder>
     <logicalFolder name="ResourceFiles"
                    displayName="Resource Files"
@@ -23,9 +30,15 @@
     <logicalFolder name="SourceFiles"
                    displayName="Source Files"
                    projectFiles="true">
+      <itemPath>ABB.cpp</itemPath>
       <itemPath>LDLCIRCIPCNC.cpp</itemPath>
+      <itemPath>LDLCIRCIPSNC.cpp</itemPath>
+      <itemPath>LDLCIRCIVCNC.cpp</itemPath>
       <itemPath>LDLCIRCIVSNC.cpp</itemPath>
+      <itemPath>LDLTNIPCNC.cpp</itemPath>
       <itemPath>LDLTNIPSNC.cpp</itemPath>
+      <itemPath>LDLTNIVCNC.cpp</itemPath>
+      <itemPath>LDLTNIVSNC.cpp</itemPath>
       <itemPath>LSLCIRCIPCNC.cpp</itemPath>
       <itemPath>LSLCIRCIPSNC.cpp</itemPath>
       <itemPath>LSLCIRCIVCNC.cpp</itemPath>
@@ -34,6 +47,7 @@
       <itemPath>LSLTNIPSNC.cpp</itemPath>
       <itemPath>LSLTNIVCNC.cpp</itemPath>
       <itemPath>LSLTNIVSNC.cpp</itemPath>
+      <itemPath>Recursividad.cpp</itemPath>
       <itemPath>main.cpp</itemPath>
     </logicalFolder>
     <logicalFolder name="TestFiles"
@@ -58,17 +72,41 @@
       </toolsSet>
       <compileType>
       </compileType>
+      <item path="ABB.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ABB.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="LDLCIRCIPCNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LDLCIRCIPCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLCIRCIPSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLCIRCIPSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLCIRCIVCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLCIRCIVCNC.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="LDLCIRCIVSNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LDLCIRCIVSNC.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="LDLTNIPCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLTNIPCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="LDLTNIPSNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LDLTNIPSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLTNIVCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLTNIVCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLTNIVSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLTNIVSNC.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="LSLCIRCIPCNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -101,6 +139,10 @@
       <item path="LSLTNIVSNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LSLTNIVSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Recursividad.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Recursividad.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -125,17 +167,41 @@
           <developmentMode>5</developmentMode>
         </asmTool>
       </compileType>
+      <item path="ABB.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="ABB.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="LDLCIRCIPCNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LDLCIRCIPCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLCIRCIPSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLCIRCIPSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLCIRCIVCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLCIRCIVCNC.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="LDLCIRCIVSNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LDLCIRCIVSNC.h" ex="false" tool="3" flavor2="0">
       </item>
+      <item path="LDLTNIPCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLTNIPCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
       <item path="LDLTNIPSNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LDLTNIPSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLTNIVCNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLTNIVCNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="LDLTNIVSNC.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="LDLTNIVSNC.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="LSLCIRCIPCNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
@@ -168,6 +234,10 @@
       <item path="LSLTNIVSNC.cpp" ex="false" tool="1" flavor2="0">
       </item>
       <item path="LSLTNIVSNC.h" ex="false" tool="3" flavor2="0">
+      </item>
+      <item path="Recursividad.cpp" ex="false" tool="1" flavor2="0">
+      </item>
+      <item path="Recursividad.h" ex="false" tool="3" flavor2="0">
       </item>
       <item path="main.cpp" ex="false" tool="1" flavor2="0">
       </item>

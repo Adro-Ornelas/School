@@ -7,16 +7,8 @@
 #include <iostream>
 #include <stdlib.h>
 #include "LDLCIRCIVSNC.h"
-#include "LSLTNIVSNC.h"
 
 using namespace std;
-
-LDLCIRCIVSNC::LDLCIRCIVSNC() {
-    p = NULL; // Cuando vacía
-}
-
-LDLCIRCIVSNC::~LDLCIRCIVSNC() {
-}
 
 int  LDLCIRCIVSNC::cardinalidad() {
     
@@ -25,17 +17,16 @@ int  LDLCIRCIVSNC::cardinalidad() {
     
     int elements = 0;
     struct NodoD* ptmp = p;
-    do{
+    do {
         ++elements;
         ptmp = ptmp->pder;
-    }while(ptmp != p);
+    } while(ptmp != p);
     
     return elements;
 }
 void LDLCIRCIVSNC::despliega() {
 
     if(!esVacia()) {
-
         struct NodoD* ptmp = p;
         do{
             cout << ptmp->dato << '\t';
@@ -63,7 +54,7 @@ bool LDLCIRCIVSNC::eliminar(int dato) {
         if(p->pizq == p) // Cuando único elemento
             p = NULL;
         else             // Cuando no es el único
-        p = p->pder;
+            p = p->pder;
     
     // Que lista deje de apuntar a nodo
     ptmp->pizq->pder = ptmp->pder;
@@ -89,9 +80,7 @@ bool LDLCIRCIVSNC::esElemento(int dato) {
     
     return false;
 }
-bool LDLCIRCIVSNC::esVacia() {
-    return (p == NULL);
-}
+
 bool LDLCIRCIVSNC::insertar(int dato) {
     
     struct NodoD *pNue = (struct NodoD*)malloc(sizeof(struct NodoD));
@@ -100,8 +89,7 @@ bool LDLCIRCIVSNC::insertar(int dato) {
     pNue->dato = dato;
     
     if(esVacia()) { // Cuando lista vacia
-        p = pNue;
-        p->pder = p->pizq = p;
+        p->pder = p->pizq = p = pNue;
         return true;
     }
     

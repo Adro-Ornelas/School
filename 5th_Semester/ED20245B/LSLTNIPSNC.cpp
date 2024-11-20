@@ -53,8 +53,10 @@ bool LSLTNIPSNC::insertar(int dato, int pos) {
         pold = ptmp;
         ptmp = ptmp->pNext;
     }
-    if(miPos != pos)
+    if(miPos != pos){
+        free(pNue);
         return false;
+    }
     // Que nodo apunte a lista
     pNue->pNext = ptmp;
     

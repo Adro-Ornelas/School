@@ -1,6 +1,5 @@
 #include <iostream>
 
-
 #include "LSLTNIVCNC.h"
 #include "LSLTNIVSNC.h"
 #include "LSLCIRCIVSNC.h"
@@ -12,9 +11,17 @@
 #include "LSLCIRCIPSNC.h"
 
 #include "LDLCIRCIPCNC.h"
+#include "LDLCIRCIPSNC.h"
 #include "LDLTNIPSNC.h"
+#include "LDLTNIPCNC.h"
 
+#include "LDLCIRCIVCNC.h"
 #include "LDLCIRCIVSNC.h"
+#include "LDLTNIVCNC.h"
+#include "LDLTNIVSNC.h"
+
+#include "Recursividad.h"
+#include "ABB.h"
 
 using namespace std;
 
@@ -28,10 +35,13 @@ int main(int argc, char** argv)
         LSLCIRCIVSNC list;    
         LSLCIRCIVCNC list;
  
+        LDLTNIVSNC list;
+        LDLTNIVCNC list;
+        LDLCIRCIVSNC list;
+        LDLCIRCIVCNC list;
      */
-    
-    
-    LDLCIRCIVSNC list;
+    /*
+    LDLCIRCIVCNC list;
     
     cout << (list.esVacia() ? "Vacía":"No vacía") << endl;
     cout << "Hay " << list.cardinalidad() << endl;
@@ -71,9 +81,7 @@ int main(int argc, char** argv)
     list.despliega();
     cout << "Hay " << list.cardinalidad() << endl;
     cout << (list.esVacia() ? "Vacía":"No vacía") << endl;           
-      
-    
-    
+    */
     //* LISTAS CON INSERCIÓN POR POSICIÓN:
     /*
      DONE LISTS
@@ -83,12 +91,13 @@ int main(int argc, char** argv)
         LSLCIRCIPSNC l;
         LSLCIRCIPCNC l;
         
+        LDLCIRCIPSNC l;
         LDLCIRCIPCNC l;
         LDLTNIPSNC l;
     */
-    
     /*
-  
+    LDLTNIPCNC l;
+    
     cout << "Hay " << l.cardinalidad() << endl;
     if(l.esVacia())
         cout << "Es vacía" << endl;
@@ -121,13 +130,130 @@ int main(int argc, char** argv)
     l.despliega();
     cout << "Elminaste el " << valor << endl; 
     if(!l.eliminar(&valor, 1)) cout << "No se puede eliminar de una lista vacia\n";
+    l.despliega();
     if(l.esVacia())
         cout << "Es vacía" << endl;
-    cout << "Hay " << l.cardinalidad() << endl;
-    l.insertar(7,1); // vacia
-    l.despliega();
-    cout << "Hay " << l.cardinalidad() << endl;
-     */
+    
+        
+    Recursividad r;
+    cout << endl;
+    // cout << "Factorial de 7 es: " << r.factorial(7);
+    cout << "5^4 = " << r.potencia(5, 4) << endl;
+    */
+    
+    
+    ABB bintree;
+    cout << "Buscando 92..." << (bintree.esElemento(92) ? "SI":"NO")
+         << " está" << endl;
+    cout << (bintree.esVacia() ? "Vacio":"No Vacio");
+    cout << "Hay" << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    bintree.inserta(67);
+    cout << "67 insertado" << endl;
+    cout << "Hay" << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    bintree.inserta(90);
+    cout << "90 insertado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    bintree.inserta(50);
+    cout << "50 insertado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    bintree.inserta(30);
+    cout << "30 insertado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    bintree.inserta(8);
+    cout << "8 insertado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    bintree.inserta(100);
+    cout << "100 insertado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    bintree.inserta(80);
+    cout << "80 insertado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    bintree.inserta(54);
+    cout << "54 insertado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    bintree.inserta(55);
+    cout << "55 insertado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    
+    cout << "Buscando 8..." << (bintree.esElemento(8) ? "SI":"NO")
+         << " está" << endl;
+    cout << "Buscando 9..." << (bintree.esElemento(9) ? "SI":"NO")
+         << " está" << endl;
+    
+    cout << "Buscando 30..." << (bintree.esElemento(30) ? "SI":"NO")
+         << " está" << endl;
+    
+    if(!bintree.inserta(54))
+        cout << "NO se puede insertar valor repetido" << endl;
+    cout << (bintree.esVacia() ? "Vacio":"No Vacio") << endl;
+    
+    
+    if(!bintree.elimina(51))
+        cout << "NO es posile eliminar un nodo que no existe (15)" << endl;
+    if(!bintree.elimina(68))
+        cout << "NO es posile eliminar un nodo que no existe (68)" << endl;
+    
+    //bintree.~ABB();
+    
+    cout << bintree.elimina(8);    // Nodo sin hijos
+    cout << " 8 eliminado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    
+    cout << bintree.elimina(50); // Nodo con dos hijos
+    cout << " 50 eliminado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    
+    cout << bintree.elimina(54); // Nodo con dos hijos
+    cout << " 54 eliminado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+        
+    cout << bintree.elimina(90); // Nodo con dos hijos
+    cout << " 90 eliminado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    
+    cout << bintree.elimina(67); // Nodo raíz
+    cout << " 67 eliminado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    
+    cout << bintree.elimina(80); // Nodo raíz con 1 hijo por la derecha
+    cout << " 80 eliminado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    
+    cout << bintree.elimina(55); // Nodo con 1 hijo por la izquierda
+    cout << " 5 eliminado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+        
+    cout << bintree.elimina(30); // Nodo  con 1 hijo por la izquierda
+    cout << " 30 eliminado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    
+    cout << bintree.elimina(100); // Nodo raíz con 0 hijos
+    cout << " 100 eliminado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
+    bintree.despliega();
+    
+    cout << (bintree.esVacia() ? "Vacio":"No Vacio") << endl;
+    bintree.despliega();
+    
+    
     return 0;
 }
 

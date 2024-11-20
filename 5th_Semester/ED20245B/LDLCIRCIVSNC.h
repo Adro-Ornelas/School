@@ -8,18 +8,18 @@
 #ifndef LDLCIRCIVSNC_H
 #define LDLCIRCIVSNC_H
 
-#include "LDLCIRCIPCNC.h"
+#include "LDLTNIPSNC.h"
 
-class LDLCIRCIVSNC : public LDLCIRCIPCNC{
+class LDLCIRCIVSNC : public LDLTNIPSNC {
 public:
-    LDLCIRCIVSNC();
-    virtual ~LDLCIRCIVSNC();
+    // LDLCIRCIVSNC();
+    // virtual ~LDLCIRCIVSNC();
     
     int  cardinalidad();
     void despliega();
     bool eliminar(int dato);
     bool esElemento(int dato);
-    bool esVacia();
+    // bool esVacia();
     bool insertar(int dato);   
 private:
 
