@@ -9,6 +9,7 @@
 
 #include <iostream>
 #include <stdlib.h>
+#include <cmath>
 
 using namespace std;
 
@@ -20,6 +21,13 @@ ABB::ABB() {
 ABB::~ABB() {
     while(p != NULL)
         elimina(p, p, p->dato);
+}
+
+int ABB::altura(NodoA* ptmp){
+    
+    if(ptmp == NULL)
+        return 0;
+    return 1 + max(altura(ptmp->pder), altura(ptmp->pizq));
 }
 
 bool ABB::esVacia(){
@@ -37,6 +45,23 @@ void ABB::inOrden(NodoA *ptmp){
     inOrden(ptmp->pizq);
     cout << ptmp->dato << "\t";
     inOrden(ptmp->pder);
+}
+
+void ABB::inPreorden(NodoA *ptmp){
+    if(ptmp == NULL)
+        return;
+    
+    cout << ptmp->dato << "\t";
+    inOrden(ptmp->pizq);
+    inOrden(ptmp->pder);
+}
+
+void ABB::inPosorden(NodoA* ptmp){
+    if(ptmp == NULL)
+        return;
+    inOrden(ptmp->pizq);
+    inOrden(ptmp->pder);
+    cout << ptmp->dato << "\t";
 }
 
 int ABB::cardinalidad(){
@@ -65,9 +90,6 @@ int ABB::cardinalidad(NodoA *ptmp){
 }
 
 bool ABB::elimina(int dato) {
-
-    if(esVacia())
-        return false;
     return elimina(p, p, dato);;
 }
 
@@ -75,49 +97,47 @@ bool ABB::elimina(NodoA* ptmp, NodoA *pold, int dato) {
     
     if(ptmp == NULL)    // Cuando el dato no existe
         return false;
-    
-    if(ptmp->dato > dato) { // Busca nodo por la izquierda
+    if(ptmp->dato > dato)  // Busca nodo por la izquierda
         return elimina(ptmp->pizq, ptmp, dato);
-    } else if ( ptmp->dato < dato) { // Busca nodo por la derecha
+    if ( ptmp->dato < dato)  // Busca nodo por la derecha
         return elimina(ptmp->pder, ptmp, dato);
-    } else {    // Si no es mayor ni menor, es igual, se encontró el nodo
-        
-        if(ptmp->pder == NULL){ // Cuando por la derecha sea null
-            
-            if(p == ptmp)
-                p = p->pizq;
-            else
-                if(pold->pder == ptmp)   
-                    pold->pder = ptmp->pizq; // Si hijo derecho
-                else    
-                    pold->pizq = ptmp->pizq; // Si hijo izquierdo
-            
-            free (ptmp);
-            return true;
-            
-        } else if(ptmp->pizq == NULL) { // Cuando por la izquierda sea null
-            
-            if(p == ptmp)
-                p = p->pder;
-            else
-                if(pold->pder == ptmp)   
-                    pold->pder = ptmp->pder; // Si hijo derecho
-                else    
-                    pold->pizq = ptmp->pder; // Si hijo izquierdo
+    
+    // Si no es mayor ni menor, es igual, se encontró el nodo    
+    if(ptmp->pder == NULL){ // Cuando por la derecha sea null
 
-            free (ptmp);
-            return true;
-        
-        } else {    // Cuando el nodo tiene dos hijos 
-            // Cuando no es null, busca siempre el más chico de los grandes
-            // Elimina ese nodo y su valor lo pone en nodo ptmp
-            struct NodoA *pchGrande = ptmp->pder; // Va por la derecha (grandes)
-            while(pchGrande->pizq != NULL)  // Itera hasta obtener el más chico
-                pchGrande = pchGrande->pizq;
-            ptmp->dato = pchGrande->dato;
-            return elimina(ptmp->pder, ptmp, pchGrande->dato);
-        }
-    } 
+        if(p == ptmp)
+            p = p->pizq;
+        else
+            if(pold->pder == ptmp)   
+                pold->pder = ptmp->pizq; // Si hijo derecho
+            else    
+                pold->pizq = ptmp->pizq; // Si hijo izquierdo
+
+        free (ptmp);
+        return true;
+
+    } else if(ptmp->pizq == NULL) { // Cuando por la izquierda sea null
+
+        if(p == ptmp)
+            p = p->pder;
+        else
+            if(pold->pder == ptmp)   
+                pold->pder = ptmp->pder; // Si hijo derecho
+            else    
+                pold->pizq = ptmp->pder; // Si hijo izquierdo
+
+        free (ptmp);
+        return true;
+
+    } else {    // Cuando el nodo tiene dos hijos 
+        // Cuando no es null, busca siempre el más chico de los grandes
+        // Elimina ese nodo y su valor lo pone en nodo ptmp
+        struct NodoA *pchGrande = ptmp->pder; // Va por la derecha (grandes)
+        while(pchGrande->pizq != NULL)  // Itera hasta obtener el más chico
+            pchGrande = pchGrande->pizq;
+        ptmp->dato = pchGrande->dato;
+        return elimina(ptmp->pder, ptmp, pchGrande->dato);
+    }
 }
 
 bool ABB::inserta(int dato) {
@@ -154,5 +174,27 @@ bool ABB::inserta(NodoA* ptmp, NodoA* pNue) {
     else { 
         free(pNue);
         return false;   // No puede haber dos nodos iguales
+    }
+}
+
+
+void ABB::imprimirArbol(){
+    imprimirArbol(p, 0, "Root: ");
+}
+
+void ABB::imprimirArbol(NodoA* ptmp, int nivel, string prefijo) {
+    if (ptmp != NULL) {
+        // Indentar de acuerdo al nivel
+        cout << string(nivel * 4, ' ') << prefijo << ptmp->dato << endl;
+
+        // Imprimir subárbol izquierdo
+        if (ptmp->pizq || ptmp->pder) { // Solo imprime si hay hijos
+            imprimirArbol(ptmp->pizq, nivel + 1, "Izq: ");
+        }
+
+        // Imprimir subárbol derecho
+        if (ptmp->pder) {
+            imprimirArbol(ptmp->pder, nivel + 1, "Der: ");
+        }
     }
 }

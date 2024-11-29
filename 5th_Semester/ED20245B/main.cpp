@@ -22,6 +22,7 @@
 
 #include "Recursividad.h"
 #include "ABB.h"
+#include "AVL.h"
 
 using namespace std;
 
@@ -142,7 +143,7 @@ int main(int argc, char** argv)
     */
     
     
-    ABB bintree;
+    AVL bintree;
     cout << "Buscando 92..." << (bintree.esElemento(92) ? "SI":"NO")
          << " está" << endl;
     cout << (bintree.esVacia() ? "Vacio":"No Vacio");
@@ -151,40 +152,37 @@ int main(int argc, char** argv)
     bintree.inserta(67);
     cout << "67 insertado" << endl;
     cout << "Hay" << bintree.cardinalidad() << endl;
-    bintree.despliega();
     bintree.inserta(90);
     cout << "90 insertado" << endl;
     cout << "Hay " << bintree.cardinalidad() << endl;
-    bintree.despliega();
     bintree.inserta(50);
     cout << "50 insertado" << endl;
     cout << "Hay " << bintree.cardinalidad() << endl;
-    bintree.despliega();
     bintree.inserta(30);
     cout << "30 insertado" << endl;
     cout << "Hay " << bintree.cardinalidad() << endl;
-    bintree.despliega();
     bintree.inserta(8);
     cout << "8 insertado" << endl;
     cout << "Hay " << bintree.cardinalidad() << endl;
-    bintree.despliega();
-    bintree.inserta(100);
+    bintree.inserta(15);
     cout << "100 insertado" << endl;
     cout << "Hay " << bintree.cardinalidad() << endl;
-    bintree.despliega();
-    bintree.inserta(80);
+    bintree.inserta(200);
     cout << "80 insertado" << endl;
     cout << "Hay " << bintree.cardinalidad() << endl;
-    bintree.despliega();
     bintree.inserta(54);
     cout << "54 insertado" << endl;
     cout << "Hay " << bintree.cardinalidad() << endl;
-    bintree.despliega();
     bintree.inserta(55);
     cout << "55 insertado" << endl;
     cout << "Hay " << bintree.cardinalidad() << endl;
-    bintree.despliega();
+    bintree.inserta(300);
+    cout << "55 insertado" << endl;
+    cout << "Hay " << bintree.cardinalidad() << endl;
     
+    bintree.imprimirArbol();
+    
+    /*
     cout << "Buscando 8..." << (bintree.esElemento(8) ? "SI":"NO")
          << " está" << endl;
     cout << "Buscando 9..." << (bintree.esElemento(9) ? "SI":"NO")
@@ -236,7 +234,7 @@ int main(int argc, char** argv)
     bintree.despliega();
     
     cout << bintree.elimina(55); // Nodo con 1 hijo por la izquierda
-    cout << " 5 eliminado" << endl;
+    cout << " 55 eliminado" << endl;
     cout << "Hay " << bintree.cardinalidad() << endl;
     bintree.despliega();
         
@@ -253,7 +251,7 @@ int main(int argc, char** argv)
     cout << (bintree.esVacia() ? "Vacio":"No Vacio") << endl;
     bintree.despliega();
     
-    
+    */
     return 0;
 }
 
