@@ -1,0 +1,13 @@
+# Target labels
+ bootloader
+# Source files and their labels
+/home/usuario1/Documents/SE2/Source Files/ESP32_PRUEBAS/blink/blink/build/CMakeFiles/bootloader
+/home/usuario1/Documents/SE2/Source Files/ESP32_PRUEBAS/blink/blink/build/CMakeFiles/bootloader.rule
+/home/usuario1/Documents/SE2/Source Files/ESP32_PRUEBAS/blink/blink/build/CMakeFiles/bootloader-complete.rule
+/home/usuario1/Documents/SE2/Source Files/ESP32_PRUEBAS/blink/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-build.rule
+/home/usuario1/Documents/SE2/Source Files/ESP32_PRUEBAS/blink/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-configure.rule
+/home/usuario1/Documents/SE2/Source Files/ESP32_PRUEBAS/blink/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-download.rule
+/home/usuario1/Documents/SE2/Source Files/ESP32_PRUEBAS/blink/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-install.rule
+/home/usuario1/Documents/SE2/Source Files/ESP32_PRUEBAS/blink/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-mkdir.rule
+/home/usuario1/Documents/SE2/Source Files/ESP32_PRUEBAS/blink/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-patch.rule
+/home/usuario1/Documents/SE2/Source Files/ESP32_PRUEBAS/blink/blink/build/bootloader-prefix/src/bootloader-stamp/bootloader-update.rule

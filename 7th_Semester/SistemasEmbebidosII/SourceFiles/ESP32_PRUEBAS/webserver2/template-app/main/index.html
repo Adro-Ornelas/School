@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>JS Y DOM EN ESP32</title>
+  </head>
+    <body>
+      <h1 id="titulo">Bienvenido</h1>
+      <button onclick="document.getElementById('miImagen').src = 'foco_on.png'">
+        Encender luces
+      </button>
+      <br>
+      <img id="miImagen" src="foco_off.png" alt="Foto dos, inicalmente pagada">
+      <br>
+      <button onclick="document.getElementById('miImagen').src = 'foco_off.png'">
+        Apagar luz
+      </button>
+    </body>
+</html>

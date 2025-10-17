@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" 
+          content="width=device-width, initial-scale=1.0">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Traffic Light Animation</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items:flex-start;
+            height: 100vh;
+            margin: 0;
+            background-color: #f0f0f0;
+        }
+        h1 {
+            color: black;
+            text-align: center;
+        }
+        .content {
+
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .traffic-signal {
+            width: 100px;
+            height: 300px;
+            background-color: #333;
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .light {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 10px;
+            transition: background-color 0.2s;
+        }
+
+        .red {
+            background-color: red;
+        }
+
+        .yellow {
+            background-color: yellow;
+        }
+
+        .green {
+            background-color: green;
+        }
+
+        #buttonToggleAuto {
+
+            border: none;
+            padding: 15px 32px;
+            background-color: rgb(32, 0, 160);
+            color: white;
+            text-align: center;
+            font-size: 16px;
+            margin: 20px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: transform 0.3s ease, backgrouncd-color ease;
+
+        }
+        @media(hover:hover) {
+            #buttonToggleAuto:hover {
+                background-color: black;
+                transform: scale(0.95);
+            }
+        }
+
+        #buttonToggleAuto:active{
+            background-color: black;
+            transform: scale(0.95);
+        }
+
+        #imgMazda {
+            margin: 20px;
+            display: none;
+            border-radius: 10px;
+        }
+
+        .responsive {
+            width: 90%;
+            height: auto;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="content">
+    <div>
+        <h1>Selecciona la luz para cambiar su estado</h1>
+    </div>
+    <div class="traffic-signal">
+        <div id="redLight" class="light red"></div>
+        <div id="yellowLight" class="light yellow"></div>
+        <div id="greenLight" class="light green"></div>
+        <script>
+            
+            /*
+                Mandar petición de cambio de estado
+                y recibir nuevo estado
+            */
+            async function toggleLight(color) {
+
+                // tdel
+                console.log(`/toggle?color=${color}`);
+
+                // Manda petición de cambio de estado al color indicado
+                const response = await fetch(`/toggle?color=${color}`);
+                
+                // Espera respuesta
+                const state = await response.text();
+
+                return state;
+            }
+
+            document.addEventListener("DOMContentLoaded", ()=> {
+
+                const redLight = document.getElementById("redLight");
+                const yellowLight = document.getElementById("yellowLight");
+                const greenLight = document.getElementById("greenLight");
+                const buttonAuto = document.getElementById("buttonToggleAuto");
+
+                const imgMazda = document.getElementById("imgMazda");
+
+                redLight.addEventListener("click", ()=> {
+                    
+                    // Manda petición de cambios y cambia en local según lo recibido
+                    toggleLight('red').
+                    then(state => {
+                        console.log("Nuevo estado:", state);
+                        if(state == '1') {
+                            // Cambia a rojo
+                            redLight.style.backgroundColor = "red";
+                        } else {
+                            // Cambia a negro
+                            redLight.style.backgroundColor = "black";
+
+                        }
+                    });
+
+                    /* CAMBIOS SÓLO EN LOCAL (PRUEBAS)
+                    if(getComputedStyle(redLight).backgroundColor == "rgb(255, 0, 0)") {
+                        // Si es rojo, cambia a negro
+                        redLight.style.backgroundColor = "black";
+
+                    } else {
+                        // Si no, regresa a rojo
+                        redLight.style.backgroundColor = "red" ;
+
+                    }
+                    */
+                });
+
+                yellowLight.addEventListener("click", ()=> {
+                                    
+                    // Manda petición de cambios y cambia en local según lo recibido
+                    toggleLight('yellow').
+                    then(state => {
+                        console.log("Nuevo estado:", state);
+                        if(state == '1') {
+                            // Cambia a amarillo
+                            yellowLight.style.backgroundColor = "yellow";
+                        } else {
+                            // Cambia a negro
+                            yellowLight.style.backgroundColor = "black";
+
+                        }
+                    });
+                });
+                
+                greenLight.addEventListener("click", ()=> {
+                    // Manda petición de cambios y cambia en local según lo recibido
+                    toggleLight('green').
+                    then(state => {
+                        console.log("Nuevo estado:", state);
+                        if(state == '1') {
+                            // Cambia a verde
+                            greenLight.style.backgroundColor = "green";
+                        } else {
+                            // Cambia a negro
+                            greenLight.style.backgroundColor = "black";
+
+                        }
+                    });
+                });
+                
+                buttonAuto.addEventListener("click", () => {
+                    
+                    /*
+                        Este orden es necsesario porque la imagen está inicialmente oculta 
+                        Cambia (toggle) entre mostrar imagen y ocultarla
+                    */
+                    if(imgMazda.style.display === "block") {    // Si el Mazda se ve
+
+                        // Muestra Mazda
+                        imgMazda.style.display = "none";
+                        buttonAuto.textContent = "Mostrar auto"
+
+                    } else  {
+                        
+                        // Oculta Mazda
+                        imgMazda.style.display = "block";
+                        buttonAuto.textContent = "Ocultar auto"
+                    }
+
+                    // Scroll al final de la página
+                    // window.sckrollTo(0, document.body.scrollHeight);
+                });
+            });
+
+
+        </script>
+    </div>
+
+    <img id="imgMazda" src="mazda_mx5.png" alt="Foto de carro" class="responsive">
+    <button id="buttonToggleAuto">Mostrar auto</button>
+    <a href="/favicon.ico">Ver ícono</a>
+    </div>
+</body>
+
+</html>
