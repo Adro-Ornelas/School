@@ -1,0 +1,20 @@
+<Grid
+  xmlns="https://github.com/avaloniaui"
+  xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+  >
+
+  <Grid>
+    <TextBlock Text="Hello World!"/>
+    <Button Name="btn2" Background="LightBlue" 
+        BorderBrush="Black" BorderThickness="1" 
+        ClickMode="Press">
+      ClickMe2iubiubiubiuiubi
+    </Button>
+    <TextBlock Text="Hell22222222222222222222o World!"/>
+    <Button Name="btn3" Background="LightBlue" 
+        BorderBrush="Black" BorderThickness="1" 
+        ClickMode="Press">
+      ClickMe2iubiubiubiuiubi222222222222
+    </Button>
+  </Grid>
+</Grid>

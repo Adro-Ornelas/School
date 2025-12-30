@@ -1,0 +1,26 @@
+{
+  "version": 2,
+  "dgSpecHash": "lbRvreQ3QB4=",
+  "success": true,
+  "projectFilePath": "/home/usuario1/Documents/PrograAvanzada/P2/Memoria_WPF/MyApp_1/MyApp_1/MyApp_1.csproj",
+  "expectedPackageFiles": [
+    "/home/usuario1/.nuget/packages/microsoft.bcl.asyncinterfaces/1.1.0/microsoft.bcl.asyncinterfaces.1.1.0.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/microsoft.csharp/4.7.0/microsoft.csharp.4.7.0.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/microsoft.jsinterop/3.1.28/microsoft.jsinterop.3.1.28.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/microsoft.netcore.platforms/1.1.0/microsoft.netcore.platforms.1.1.0.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/netstandard.library/2.0.3/netstandard.library.2.0.3.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/opensilver/3.2.2/opensilver.3.2.2.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/system.buffers/4.5.1/system.buffers.4.5.1.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/system.componentmodel.annotations/5.0.0/system.componentmodel.annotations.5.0.0.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/system.componentmodel.composition/6.0.0/system.componentmodel.composition.6.0.0.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/system.memory/4.5.4/system.memory.4.5.4.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/system.numerics.vectors/4.5.0/system.numerics.vectors.4.5.0.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/system.runtime.compilerservices.unsafe/4.7.1/system.runtime.compilerservices.unsafe.4.7.1.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/system.security.principal.windows/5.0.0/system.security.principal.windows.5.0.0.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/system.servicemodel.primitives/8.1.0/system.servicemodel.primitives.8.1.0.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/system.text.encodings.web/4.7.2/system.text.encodings.web.4.7.2.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/system.text.json/4.7.2/system.text.json.4.7.2.nupkg.sha512",
+    "/home/usuario1/.nuget/packages/system.threading.tasks.extensions/4.5.4/system.threading.tasks.extensions.4.5.4.nupkg.sha512"
+  ],
+  "logs": []
+}

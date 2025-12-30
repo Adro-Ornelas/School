@@ -1,0 +1,5 @@
+Z:\home\usuario1\Documents\PrograAvanzada\P2\Memoria_WPF\SimonWpf\SimonWpf\bin\Release\net8.0-windows\win-x64\publish\SimonWpf.exe
+Z:\home\usuario1\Documents\PrograAvanzada\P2\Memoria_WPF\SimonWpf\SimonWpf\bin\Release\net8.0-windows\win-x64\publish\SimonWpf.dll
+Z:\home\usuario1\Documents\PrograAvanzada\P2\Memoria_WPF\SimonWpf\SimonWpf\bin\Release\net8.0-windows\win-x64\publish\SimonWpf.deps.json
+Z:\home\usuario1\Documents\PrograAvanzada\P2\Memoria_WPF\SimonWpf\SimonWpf\bin\Release\net8.0-windows\win-x64\publish\SimonWpf.runtimeconfig.json
+Z:\home\usuario1\Documents\PrograAvanzada\P2\Memoria_WPF\SimonWpf\SimonWpf\bin\Release\net8.0-windows\win-x64\publish\SimonWpf.pdb

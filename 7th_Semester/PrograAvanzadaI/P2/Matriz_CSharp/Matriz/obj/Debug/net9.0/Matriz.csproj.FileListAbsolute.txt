@@ -1,0 +1,14 @@
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/bin/Debug/net9.0/Matriz
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/bin/Debug/net9.0/Matriz.deps.json
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/bin/Debug/net9.0/Matriz.runtimeconfig.json
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/bin/Debug/net9.0/Matriz.dll
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/bin/Debug/net9.0/Matriz.pdb
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/obj/Debug/net9.0/Matriz.GeneratedMSBuildEditorConfig.editorconfig
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/obj/Debug/net9.0/Matriz.AssemblyInfoInputs.cache
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/obj/Debug/net9.0/Matriz.AssemblyInfo.cs
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/obj/Debug/net9.0/Matriz.csproj.CoreCompileInputs.cache
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/obj/Debug/net9.0/Matriz.dll
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/obj/Debug/net9.0/refint/Matriz.dll
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/obj/Debug/net9.0/Matriz.pdb
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/obj/Debug/net9.0/Matriz.genruntimeconfig.cache
+/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/obj/Debug/net9.0/ref/Matriz.dll

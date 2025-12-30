@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "XPPr4K0jsx8=",
+  "success": true,
+  "projectFilePath": "/home/usuario1/Documents/PrograAvanzada/P2/Matriz_CSharp/Matriz/Matriz.csproj",
+  "expectedPackageFiles": [
+    "/home/usuario1/.nuget/packages/microsoft.aspnetcore.app.ref/9.0.9/microsoft.aspnetcore.app.ref.9.0.9.nupkg.sha512"
+  ],
+  "logs": []
+}

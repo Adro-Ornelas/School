@@ -1,0 +1,57 @@
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.exe
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.deps.json
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.runtimeconfig.json
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.dll
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.pdb
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\MainWindow.baml
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\MainWindow.g.cs
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\App.g.cs
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf_MarkupCompile.cache
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.g.resources
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.AssemblyInfoInputs.cache
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.AssemblyInfo.cs
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.csproj.CoreCompileInputs.cache
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.dll
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\refint\SimonWpf.dll
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.pdb
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.genruntimeconfig.cache
+C:\Users\Kosey\Downloads\CETI\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\ref\SimonWpf.dll
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.exe
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.deps.json
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.runtimeconfig.json
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.dll
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.pdb
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\MainWindow.baml
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\App.g.cs
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf_MarkupCompile.cache
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.g.resources
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.GeneratedMSBuildEditorConfig.editorconfig
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.AssemblyInfoInputs.cache
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.AssemblyInfo.cs
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.csproj.CoreCompileInputs.cache
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.dll
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\refint\SimonWpf.dll
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.pdb
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.genruntimeconfig.cache
+D:\Programacion Avanzada I\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\ref\SimonWpf.dll
+D:\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.exe
+D:\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.deps.json
+D:\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.runtimeconfig.json
+D:\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.dll
+D:\SimonWpf\SimonWpf\bin\Debug\net8.0-windows\SimonWpf.pdb
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\MainWindow.baml
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\MainWindow.g.cs
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\App.g.cs
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf_MarkupCompile.cache
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.g.resources
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.GeneratedMSBuildEditorConfig.editorconfig
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.AssemblyInfoInputs.cache
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.AssemblyInfo.cs
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.csproj.CoreCompileInputs.cache
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.dll
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\refint\SimonWpf.dll
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.pdb
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\SimonWpf.genruntimeconfig.cache
+D:\SimonWpf\SimonWpf\obj\Debug\net8.0-windows\ref\SimonWpf.dll

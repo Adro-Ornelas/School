@@ -1,0 +1,5 @@
+Z:\home\usuario1\Documents\PrograAvanzada\P2\Memoria_WPF\Sonido1\bin\Release\net9.0-windows\win-x64\publish\Sonido1.exe
+Z:\home\usuario1\Documents\PrograAvanzada\P2\Memoria_WPF\Sonido1\bin\Release\net9.0-windows\win-x64\publish\Sonido1.dll
+Z:\home\usuario1\Documents\PrograAvanzada\P2\Memoria_WPF\Sonido1\bin\Release\net9.0-windows\win-x64\publish\Sonido1.deps.json
+Z:\home\usuario1\Documents\PrograAvanzada\P2\Memoria_WPF\Sonido1\bin\Release\net9.0-windows\win-x64\publish\Sonido1.runtimeconfig.json
+Z:\home\usuario1\Documents\PrograAvanzada\P2\Memoria_WPF\Sonido1\bin\Release\net9.0-windows\win-x64\publish\Sonido1.pdb
