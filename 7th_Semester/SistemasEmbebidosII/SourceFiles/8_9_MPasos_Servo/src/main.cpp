@@ -8,7 +8,7 @@
 #include <LittleFS.h>
 // #include <Arduino_JSON.h>
 
-#define GPIO_SERVO 13
+#define GPIO_SERVO 15
 #define STEPS 4
 
 //---------------------------MACROS--------------------------
@@ -40,11 +40,11 @@ const byte period = 5; // 10 ms
 
 // Servomotor
 Servo servo;
-int grad;   // 0 - 180
+int grad; // 0 - 180
 
 // Replace with your network credentials
-const char *ssid = "TOTALPLAY_E81F9F";
-const char *password = "F3W411WTET";
+const char *ssid = "RealmeGTM";
+const char *password = "244466666";
 
 // Create AsyncWebServer object on port 80
 AsyncWebServer server(80);
@@ -56,16 +56,20 @@ AsyncWebSocket ws("/ws");
 const char *PARAM_INPUT_1 = "direction";
 const char *PARAM_INPUT_2 = "steps";
 
-
 String message = "";
 
 // Variables to save values from HTML form
-String direction ="STOP";
+String direction = "STOP";
+String velocidad;
 String steps;
-
+int velocidad_int = 2; // Default value
 bool newRequest = false;
 
+// Para ángulos:
+int sizeAng = 0;
+int angles[100];
 
+void recorrerAngulos(void);
 
 //------------------FUNCIONES FS Y WEB SERVER----------------
 
@@ -96,38 +100,63 @@ void initWiFi()
   Serial.println(WiFi.localIP());
 }
 
-void notifyClients(String state) {
+void notifyClients(String state)
+{
   ws.textAll(state);
 }
 
-void handleWebSocketMessage(void *arg, uint8_t *data, size_t len) {
-  AwsFrameInfo *info = (AwsFrameInfo*)arg;
+void handleWebSocketMessage(void *arg, uint8_t *data, size_t len)
+{
+  AwsFrameInfo *info = (AwsFrameInfo *)arg;
 
-   if (info->final && info->index == 0 && info->len == len && info->opcode == WS_TEXT) {
+  if (info->final && info->index == 0 && info->len == len && info->opcode == WS_TEXT)
+  {
 
-    data[len] = 0;                // null-terminate
-    String msg = (char*)data;
+    data[len] = 0; // null-terminate
+    String msg = (char *)data;
 
     Serial.print("Received: ");
     Serial.println(msg);
 
     // --------- Detect message type ---------
-    if (msg.startsWith("MOVE:")) {
-      // Format: MOVE:direction
-      direction = msg.substring(5);
-      Serial.println(direction);
+    if (msg.startsWith("MOVE:"))
+    {
 
-        notifyClients(direction);
-        newRequest = true;
-      
+      // Velocidad es 1 para baja y 2 para alta
+      // dirc es UP o DW
+      // Format: MOVE:dirc&velocidad
+
+      // Obtiene sólo los datos
+      String payload = msg.substring(5);
+
+      // Obtiene índice del separador &
+      int amp = payload.indexOf("&");
+
+      if (amp > 0)
+      {
+        // Obtiene dirección
+        // UP or DW
+        direction = payload.substring(0, amp);
+        // 1 or 2
+        velocidad = payload.substring(amp + 1);
+        velocidad_int = velocidad.toInt();
+      }
+
+      Serial.print(direction);
+      Serial.println(velocidad_int);
+
+      notifyClients(direction);
+      newRequest = true;
     }
 
-    else if (msg == "STOP") {
+    else if (msg == "STOP")
+    {
       Serial.println("Stopping motor...");
       notifyClients("STOP");
       // Add your stop logic here
     }
-    else if (msg.startsWith("ROT:")) {
+    else if (msg.startsWith("ROT:"))
+    {
 
       // Format: ROT:grad
       String s_grad = msg.substring(4);
@@ -135,34 +164,74 @@ void handleWebSocketMessage(void *arg, uint8_t *data, size_t len) {
       Serial.println(i_grad);
       servo.write(i_grad);
     }
+    else if (msg.startsWith("ANG:"))
+    {
+
+      // El primer dígito es el número de ángulos
+      // Formato: ANG:3&90&180&100
+      String payload = msg.substring(4);  // Quita inicio
+      payload.trim();   // Quita \n final
+
+      int amp = payload.indexOf("&");
+
+      // Obtiene número de ángulos
+      sizeAng = payload.substring(0, amp).toInt();
+
+      // Quita el número de ángulos de la cadena
+      // payload = payload.substring(amp + 1);
+
+      Serial.print("Size:");
+      Serial.println(sizeAng);
+
+      // LLena el arreglo 
+      for(int i = 0; i < sizeAng; ++i) {
 
 
-    else {
+        payload = payload.substring(amp + 1);
+
+        amp = payload.indexOf("&");
+        
+        angles[i] = payload.substring(0, amp).toInt();
+
+        Serial.print("[");
+        Serial.print(angles[i]);
+        Serial.println("]");
+      }
+
+      recorrerAngulos();
+
+    }
+
+    else
+    {
       Serial.println("Unknown message type.");
     }
   }
 }
 
-void onEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len) {
-  switch (type) {
-    case WS_EVT_CONNECT:
-      Serial.printf("WebSocket client #%u connected from %s\n", client->id(), client->remoteIP().toString().c_str());
-      //Notify client of motor current state when it first connects
-      notifyClients(direction);
-      break;
-    case WS_EVT_DISCONNECT:
-      Serial.printf("WebSocket client #%u disconnected\n", client->id());
-      break;
-    case WS_EVT_DATA:
-        handleWebSocketMessage(arg, data, len);
-        break;
-    case WS_EVT_PONG:
-    case WS_EVT_ERROR:
-     break;
+void onEvent(AsyncWebSocket *server, AsyncWebSocketClient *client, AwsEventType type, void *arg, uint8_t *data, size_t len)
+{
+  switch (type)
+  {
+  case WS_EVT_CONNECT:
+    Serial.printf("WebSocket client #%u connected from %s\n", client->id(), client->remoteIP().toString().c_str());
+    // Notify client of motor current state when it first connects
+    notifyClients(direction);
+    break;
+  case WS_EVT_DISCONNECT:
+    Serial.printf("WebSocket client #%u disconnected\n", client->id());
+    break;
+  case WS_EVT_DATA:
+    handleWebSocketMessage(arg, data, len);
+    break;
+  case WS_EVT_PONG:
+  case WS_EVT_ERROR:
+    break;
   }
 }
 
-void initWebSocket() {
+void initWebSocket()
+{
   ws.onEvent(onEvent);
   server.addHandler(&ws);
 }
@@ -198,8 +267,6 @@ void setup()
   initWebSocket();
   // Inicia small fs
   initLittleFS();
-
-  
 
   // Web Server Root URL
   server.on("/", HTTP_GET, [](AsyncWebServerRequest *request)
@@ -244,15 +311,16 @@ void loop()
 
   if (newRequest)
   {
-    if (direction == "CW")
+    // CW (clockwise es bajar)
+    if (direction == "DW")
     {
-      stepperClockwise(1);
-      Serial.println("CW");
+      stepperClockwise(velocidad_int);
+      Serial.println("DOWN-CW");
     }
     else
     {
-      stepperAntiClockWise(1);
-      Serial.println("ACW");
+      stepperAntiClockWise(velocidad_int);
+      Serial.println("UP-ACW");
     }
     newRequest = false;
     notifyClients("stop");
@@ -279,7 +347,7 @@ void loop()
 
 void stepperClockwise(int ms)
 {
-  int period = 4;
+  int period = ms;
 
   for (int h = 0; h < 512; ++h)
   {
@@ -300,7 +368,7 @@ void stepperClockwise(int ms)
 
 void stepperAntiClockWise(int ms)
 {
-  int period = 4;
+  int period = ms;
 
   for (int h = 0; h < 512; ++h)
   {
@@ -317,4 +385,16 @@ void stepperAntiClockWise(int ms)
   }
   // Quedo prendido D, se apaga
   digitalWrite(stepsPIN[3], LOW);
+}
+
+void recorrerAngulos(void)
+{
+
+  for (int i = 0; i < sizeAng; ++i)
+  {
+    servo.write(angles[i]);
+    delay(1500);
+  }
+
+  sizeAng = 0;
 }

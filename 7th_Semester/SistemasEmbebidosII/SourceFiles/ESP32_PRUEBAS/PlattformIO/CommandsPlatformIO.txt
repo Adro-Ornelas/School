@@ -1,0 +1,37 @@
+
+//--------------------PLATFORMIO COMMANDS FOR ESP32 DEVELOPING----------------//
+
+1. Create a new project for ESP32 DevKit v1
+
+mkdir ~/esp32_blink
+cd ~/esp32_blink
+pio project init --board esp32dev
+
+// To see available boards: pio boars | grep uno
+
+
+2. Create and edit src/main.cpp
+3. Build project:
+pio run
+
+4. Upload project
+pio run -t upload --upload-port /dev/ttyUSB0
+
+5. Open Serial monitor
+pio device monitor --baud 115200
+
+
+//----------------------------ADD LIBRARIES---------------------//
+TWO WAYS:
+
+1. Declaring them in platform.ini
+
+	lib_deps =
+		adafruit/Adafruit Unified Sensor
+		adafruit/DHT sensor library
+
+2. By installing them
+
+	pio pkg install --library "Adafruit Unified Sensor"
+	pio pkg install --library "DHT sensor library"
+

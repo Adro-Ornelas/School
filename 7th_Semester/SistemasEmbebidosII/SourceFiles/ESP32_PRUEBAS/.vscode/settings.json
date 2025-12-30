@@ -1,0 +1,9 @@
+{
+    "idf.pythonInstallPath": "/usr/bin/python",
+    "idf.port": "/dev/ttyACM0",
+    "idf.openOcdConfigs": [
+        "board/esp32-wrover-kit-3.3v.cfg"
+    ],
+    "idf.espIdfPath": "/home/usuario1/esp/v5.1.6/esp-idf",
+    "idf.toolsPath": "/home/usuario1/.espressif"
+}

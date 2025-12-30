@@ -168,6 +168,7 @@ byte pedirModo(void) {
   return (k - '1');
 }
 
+
 void vueltaHoraria(enum PASOS pasos) {
   
   if(pasos == COMPLETOS){

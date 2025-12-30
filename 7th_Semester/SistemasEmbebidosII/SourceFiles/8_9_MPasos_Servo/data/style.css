@@ -20,6 +20,11 @@ p{
 
 body {
   margin: 0;
+  
+  background-image: url("https://media.istockphoto.com/id/165815500/es/vector/gr%C3%BAas.jpg?s=612x612&w=0&k=20&c=dv9DENMBUNqjkgkzXldgao_gH6aHdzzd640eY_RWwaU=");
+  background-position-y: 90px;
+  background-repeat: repeat-x;
+  background-color: #ffffff;
 }
 
 .content {
@@ -112,11 +117,16 @@ input[type="radio"]:checked{
  /* PARA EL SLIDE CONTROL */
 .slidecontainer {
   width: 100%;
+  margin-bottom: 10%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 .slider {
   
-  width: 100%;
+  width: 90dvw;
   height: 45px;
   background: #d3d3d3;
   outline: none;
@@ -144,3 +154,56 @@ input[type="radio"]:checked{
   background: #04AA6D;
   cursor: pointer;
 }
+
+.btnUp {
+  width: 140px;
+  height: 140px;
+  background-color: #ff0000;
+  border-radius: 100px;
+}
+
+
+.btnDown {
+
+  width: 140px;
+  height: 140px;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  background-color: #00cb07;
+  border-radius: 100px;
+
+}
+
+.fa-icon {
+  font-size: 100px;
+}
+
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.lbl-1 {
+  font-size: 30px;
+}
+
+.txt-1 {
+  font-size: 30px;
+}
+
+.mt-1 {
+  margin-top: 5%;
+}
+
+.mb-1 {
+  margin-bottom: 5%;
+}
+
