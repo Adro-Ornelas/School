@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejemplo JS y DOM</title>
+  </head>
+    <body>
+      <h1 id="titulo">Bienvenido</h1>
+      <button onclick="cambiarTexto()">Haz clic aquí</button>
+      <script>
+        function cambiarTexto() {
+          const title = document.getElementById("titulo");
+          title.textContent = "Texto cambiado";
+          title.style.color = "blue";
+        }
+      </script>
+    </body>
+</html>

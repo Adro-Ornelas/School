@@ -1,0 +1,94 @@
+/* styles.css */
+
+/* Añade fuentes  */
+@import url('https://fonts.cdnfonts.com/css/kelvinch');
+
+
+/* Estilos por tipo de etiqueta */
+                
+h1 {
+    font-family: 'kelvinch';
+    font-size: 70px;
+    margin-top: 5%;
+    /* margin-left: 10%; */
+}
+
+p {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    font-size: 30px;
+}
+
+/* Sobreescribir algunos elementos de Bootstrap 5 */
+.navbar-brand {
+    margin-left: 40px;
+}
+
+.nav-link {
+    height: 70px;
+   
+    color: #FFF;
+    background-color: transparent;
+    transition-duration: .2s;
+}
+
+.nav-link:hover {
+   
+    color: #000;
+}
+
+.nav-item:hover{
+
+    background-color: #FFF;
+
+
+}
+ /* Diseños propios */
+#imageLogoNavBar {
+    width: 60px;
+    height: 60px;
+    margin-right: 100px;
+}
+
+#imageLogoAlt {
+    width: 200px;
+    height: 200px;
+    margin: 0px;
+}
+
+#gifPrincipalGuitarr {
+
+    width: 400px;
+    height: 400px;
+    margin-top: 120px;
+}
+
+#imgFenderDrawing {
+    
+    /* width: 300px; */
+    max-width: 320px;
+
+}
+
+.section-scroll-up{
+    scroll-margin-top: 45px;
+}
+
+.img-carrusel {
+    max-width: 400px;
+    height: 300px;
+}
+
+.caption-below {
+  position: static !important;
+  padding: 1rem 0;
+  color: #000;
+  background-color: transparent; /* o rgba(255,255,255,0.7) si quieres contraste */
+  text-align: center;
+}
+
+.carousel-indicators.custom-position {
+  position: static;
+  margin-top: 0.5rem;
+}
+

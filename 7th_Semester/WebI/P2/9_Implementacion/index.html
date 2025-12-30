@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <title>
+        Curriculum
+    </title>
+
+    <!-- Inconos de FontAwesome 4.7.0 -->
+    <link rel="stylesheet" href="./font-awesome-4.7.0/css/font-awesome.css">
+
+    <link rel="stylesheet" href="/path/to/flickity.css" media="screen">
+    
+
+    <!-- section-principalEstilos propios -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Script para botones y carrusel -->
+    <script src="main.js"></script>
+
+
+<!-- Latest compiled JavaScript -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</head>
+
+<body>
+
+    <div class="top-nav">
+        <ul>
+            <li><h2>Adro Ornelas</h2></li>
+            <li><a class ="main-a-nav" href="./index.html">Principal</a></li>
+            <li><a href="#section-aboutme">Acerca de mí</a></li>
+            <li><a href="#section-detalle">Experiencia</a></li>
+            <li><a href="#section-portafolio">Portafolio</a></li>
+        </ul>        
+    </div>
+
+    <div class="div-todo">
+    <!-- Sección principal -->
+    <div id="section-principal">
+
+        <div class="wrapper">
+            <div>                
+                <img src="images/adro.webp" alt="Foto de Adro Ornelas" class="img-profile">
+
+            </div>
+
+            <div>
+                <!-- Espacio vacío -->
+            </div>    
+
+            <div>
+                <!-- Ésta columna se divide en dos filas -->
+                
+                <p class="parrafo-principal" style="margin-top: 90px;">
+                    Adro Yael Ornelas Ornelas<br>
+                    18 años<br>
+                    Juan Álvarez 341 Z<br>
+                    7B1<br>
+                    Tecnólogo en Desarrollo de Software
+                </p>
+                
+
+                <div class="wrapper" style="justify-content: space-between;">
+                <div>
+                    <!-- Icono de telefono -->
+                    <span class="icon-fa">
+                    <i id="phoneButton" class="fa fa-phone" aria-hidden="true"></i>
+                    </span>
+                    
+                </div>
+
+                <div>
+                    <!-- Icono de correo electrónico -->
+                    <span class="icon-fa">
+                    <i id="emailButton" class="fa fa-envelope"></i>
+                    </span>
+                    
+                </div>
+                </div>
+                <!-- Trigger/Open The Modal -->
+        
+                <!-- El Modal -->
+                <div id="myModal" class="modal">
+                <!-- Contenido del modal -->
+                <div class="modal-content">
+                    <span class="close">&times;</span>
+                    <p id="modal_paragraph1">.</p>
+                </div>
+
+                </div>
+            
+            </div>
+
+
+        </div>
+
+    </div>
+    </div>
+
+    <!-- Sección acerca de mí (about me) -->
+    <div id="section-aboutme">
+        <h1>Acerca de mí</h1>
+        <p class="parrafo-principal" style="border: 0; font-weight: normal; text-align: justify; margin: 30px;">
+            Estudiante actual del Centro de Enseñanza Técnica Industrial <strong>(CETI)</strong> plantel Colomos, gran entusiasta de la programación a bajo nivel, como sistemas operativos y microcontroladores, usuario activo de <strong>Arch Linux</strong> y programador frecuente del ESP32, con la inspiración del escritor más sobrio y mortal de algún día hacer algo que ayude a un numéro mayor de personas de las que puedo conocer en mi día a día, con el objetivo de visitar el país de <strong>Alemania</strong> para aprender las cosas buenas de allá, traerlas aquí y llevar las cosas buenas de aquí a allá.<br>Todo lo anterior abarca lo académico y lo profesional y lo social, pero que es esto que está sucediendo?<br>Se llama vida y todos, querido lector, la adolecemos y la disfrutamos, así que, sea tomando conciencia de la respiración, pensar un poco en metafísica o observar detenidamente realidad, sea lo que sea, lo que sea, lo que seas, si puede inspirar, <strong>que inspire!!!</strong><br>Y yo me sentiría alegre de inspirar a todo aquél que su camino actual resulte <strong>bochornoso</strong>.
+        </p>
+    </div>
+    
+    <!-- Sección detalle -->
+    <div id="section-detalle">
+
+        <!-- Divide en dos columnas -->
+        
+        <div class="wrapper">
+            <div>
+                <h1>Formación académica</h1>
+                <ul>
+                    <li>Kinder en Colegio Erik Erikson</li>
+                    <li>Escuela primaria en Escuela Normal Occidental E.N.O.</li>
+                    <li>Escuela secundaria en Mixta Juana de Asbaje #56</li>
+                    <li>Inglés en Top Learning</li>
+                    <li>Alemán en UAG</li>
+                    <li>Bachillerato tecnológico (tecnólogo de desarrollo en software) en Centro de Enseñanza Técnica Industrial CETI</li>
+                </ul>
+            </div>
+            
+            <div>
+                
+                <h1>Experiencia laboral</h1>
+                <ul>
+                    <li>Fundamentos de electrónica</li>
+                    <li>Electrónica analógica</li>
+                    <li>Electrónica digital</li>
+                    <li>Programación básica</li>
+                    <li>Programación media</li>
+                    <li>C/C++</li>
+                    <li>Java</li>
+                    <li>Linux</li>
+                    <li>Arch Linux!!!</li>
+                    <li>GitHub</li>
+                    <li>Sistemas embebidos</li>
+                    <li>Programación móvil</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="section-portafolio">
+        <h1>Portafolio</h1>
+
+        <div  class="carrusel">
+
+        <button id="anterior" class="boton">⟨</button>
+
+        <img src="images/vscode.webp" class="img-carrusel" alt="Usando vs-code">
+        <img src="images/diagrama2.webp" class="img-carrusel" alt="Diagrama eléctrico">
+        <img src="images/github.webp" class="img-carrusel" alt="Github">
+        <img src="images/fracuency1.webp" class="img-carrusel" alt="Aplicación movil Frecuency">
+        <img src="images/grafica.webp" class="img-carrusel" alt="Gráfica de altutómetro">
+        <img src="images/sistema_minimo.webp" class="img-carrusel" alt="Sistema mínimo">
+        <img src="images/arduino.webp" class="img-carrusel" alt="Proyecto con arduino">
+        <img src="images/diagrama1.webp" class="img-carrusel" alt="Diagrama eléctrico">
+
+        <button id="siguiente" class="boton">⟩</button>
+
+        </div>
+
+    </div>
+   
+</body>
+</html>

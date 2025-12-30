@@ -1,0 +1,270 @@
+<!-- index.html -->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>WikiGuitarre</title>
+
+    <meta charset="UTF-8">
+
+    <!-- Usando Bootstrap 5 -->
+     <!-- Latest compiled and minified CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script> 
+
+
+    <!-- Rnsure proper rendering and touch zooming (mobile devices) -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+    <!-- Sobreescribe estilos propios sobre bootstrap -->
+    <link rel="stylesheet" href="./styles.css">
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="img/logo_wikiguitarre_white.webp">
+
+</head>
+
+<body>
+
+    <!-- Barra de navegación horizontal que se hace verticla en pantallas pequeñas -->
+    <nav style="height: 70px;"  class="navbar fixed-top navbar-expand-sm bg-black navbar-dark p-0" >
+    <div class="container-fluid d-flex flex-row">
+        <a class="navbar-brand" href="./index.html">
+            <img id="imageLogoNavBar" src="./img/logo_wikiguitarre_white.webp" alt="Logo de WikiGuitarre">
+            WikiGuitarre
+        </a>
+        <!-- Links -->
+        <ul class="navbar-nav ms-auto">
+        
+
+        <li class="nav-item border border-white">
+            <a href="#" class=" px-5 fs-4 nav-link d-flex align-items-center justify-content-center">La música</a>
+        </li>
+
+        <li class="nav-item border-end">
+            <a href="#" class="fs-4 px-5 nav-link d-flex align-items-center justify-content-center" >La guitarra</a>          
+        </li>
+
+        </ul>
+    </div>
+    </nav>
+    
+
+    <!-- Sección principal -->
+    <div class="container-fluid vw-100 vh-100 bg-white" style="margin-top: 70px;">
+        
+            <div class="row g-0 px-5">
+                <div class="col">
+                    <div class="d-flex flex-column flex-wrap">
+
+                        <div class="p-2">
+                            <h1 class="text-black">WikiGuitarre</h1>        
+                        </div>
+
+                        <div class="p-2">
+                            <p class="text-black">En ésta wiki encontrarás toda la información pertinente para inciar tu concimiento muscial y por supuesto !a tocar la guitarra!</p>        
+                        </div>
+
+                        <div class="p-2 align-self-center">
+                            <a href="#sectionEmpezarAprender" class="btn btn-dark bg-black">
+                                Iniciar mi viaje
+                            </a>       
+                                    
+                        </div>
+                    </div>
+                
+                </div>
+
+                <div class="col-1">
+                    <img id="imageLogoAlt" src="img/guitarr_logo1.webp" alt="Logo alterativo">
+                </div>
+                <div class="col">
+                    <img id="gifPrincipalGuitarr" class="img-fluid float-end" src="gif/playing_guitarr1.gif" alt="Animación de tocar guitarra">
+                    
+                </div>
+            </div>
+    </div>
+
+
+    <!-- Sección empezar a aprender -->
+    <div id="sectionEmpezarAprender" class="container-fluid vw-100 vh-100 bg-white section-scroll-up">
+    <div class="d-flex px-5">
+        <div class="p-2 h-100 w-100 text-center">
+            <img class="img-fluid" id="imgFenderDrawing" src="img/guitarr_maquinaria_drawing.webp" alt="Imagen de Maquinaria Fender">
+        </div>
+        <div class="p-2 h-100 w-100">
+            
+            <div class="d-flex flex-column">
+                <div class="p-2">
+                    <h1 class="text-center">Empezar a aprender</h1>
+                </div>
+
+                <div class="p-2">
+                    <p class="text-center">Para empezar a tocar la guitarra te presentamos una serie de pasos, desde las partes de la guitarra, hasta acordes y canciones</p>
+
+                </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sección 1.Elegir guitarra -->
+    <div class="container-fluid vw-100 vh-100 bg-white ">
+    <div class="d-flex px-5 align-items-center">
+        <div class="p-2 h-100 w-100 text-center">
+        <div class="d-flex flex-column">
+                <div class="p-0">
+                    <h1 class="text-start">1.Elegir guitarra</h1>
+                </div>
+
+                <div class="p-0">
+                    <p class="text-start fs-4">
+                    El primer paso para iniciar tu viaje en el mundo de la acústica de cuerdas es elegir una guitarra que se alinee con tu personalidad.
+                    </p>
+
+                    <p class="text-start fs-4">
+                    Para esto es útil conocer 
+                    <a href="#sectionTiposGuitarra" class="link-secondary fst-italic">los tipos de guitarra</a>. 
+                    Nuestra recomendación para principiantes es optar por una guitarra 
+                    <strong>clásica o acústica con cuerdas de nailon, más suaves al tacto</strong>.
+                    </p>
+
+
+                </div>
+            </div>    
+        </div>
+        <div class="p-2 h-100 w-100 text-center">
+            <img class="img-fluid mt-5" id="imgGuitarrDrawing" src="img/guitarr_drawing_transparent.webp" alt="Imagen de Maquinaria Fender" width="450">
+        </div>
+        </div>
+    </div>
+
+
+    <!-- Sección 2.Tipos guitarra -->
+    <div id="sectionTiposGuitarra" class="container-fluid vw-100 vh-100 bg-white ">
+    <h1 class="text-center py-2">Tipos de guitarra</h1>
+
+    <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+ 
+    <div class="carousel-inner">
+        <div class="carousel-item active" data-bs-interval="10000">
+        <img src="img/guitarra_acustica1.webp" class="img-fluid mx-auto d-block img-carrusel" alt="...">
+        <div class="carousel-caption caption-below p-0 m-0">
+            <h4><strong>Acústica</strong></h4>
+            <p class="fs-4 p-0 px-5 mx-5 m-0">A nivel conceptual, cualquier guitarra que no necesite de un sistema de amplificación externo, es una guitarra acústica. En la practica, llamamos guitarra acústica a un tipo de guitarra que tiene su origen en los estados unidos de finales del siglo XIX, y que oficialmente se llama «guitarra sajona». Su sonido es más brillante y fuerte debido a que utiliza cuerdas de acero y tiene un cuerpo más grande. Es ideal para tocar música folk, rock y pop.</p>
+        </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/guitarra_clasica.webp" class="img-fluid mx-auto d-block img-carrusel" alt="Acústica - Clásica">
+        <div class="carousel-caption caption-below p-0 m-0">
+            <h4><strong>Acústica - Clásica</strong></h4>
+            <p class="fs-4 p-0 px-5 mx-5 m-0">La más popular del mundo. Sonido cálido y suave, gracias a su cuerpo de madera y a las cuerdas de nylon que utiliza. es, de entre los distintos tipos de guitarra, la que tiene el diapasón más ancho y una mayor distancia de las cuerdas a éste. Esto hace que sea algo más compleja de empezar a tocar. Aunque por otro lado, las cuerdas de nylon son más blandas, lo que también hace que los dedos del principiante sufran menos en los comienzos.</p>
+        </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/guitarra_telecaster.webp" class="img-fluid mx-auto d-block img-carrusel" alt="Eléctrica - Telecaster">
+        <div class="carousel-caption caption-below p-0 m-0">
+            <h4><strong>Eléctrica - Telecaster</strong></h4>
+            <p class="fs-4 p-0 px-5 mx-5 m-0">La Telecaster, desarrollada por Leo Fender en 1950, es la primera guitarra eléctrica de cuerpo sólido de éxito comercial. Conocida por su tono brillante y su capacidad para producir tanto sonidos cálidos de country como los rugidos característicos del rock, la Telecaster es apreciada por su versatilidad. Su diseño sencillo, con dos pastillas, un interruptor de tres vías y controles de volumen y tono, es emblemático</p>
+        </div>
+        </div>
+
+
+        <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/guitarra_stratocaster.webp" class="img-fluid mx-auto d-block img-carrusel" alt="Eléctrica - Stratocaster">
+        <div class="carousel-caption caption-below p-0 m-0">
+            <h4><strong>Eléctrica - Stratocaster</strong></h4>
+            <p class="fs-4 p-0 px-5 mx-5 m-0"> La Stratocaster, uno de los tipos de guitarra eléctrica más emblemáticos, salió al mercado por Fender en 1954. Su forma de doble recorte y sus tres captadores de bobina simple la hacen única. Su adaptabilidad la hace apreciada en varios estilos musicales.</p>
+        </div>
+        </div>
+
+
+        <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/guitarra_superstratocaster.webp" class="img-fluid mx-auto d-block img-carrusel" alt="Superstratocaster">
+        <div class="carousel-caption caption-below p-0 m-0">
+            <h4><strong>Eléctrica - Superstratocaster</strong></h4>
+            <p class="fs-4 p-0 px-5 mx-5 m-0">Las guitarras Superstrat o Súper Stratocaster son una evolución de la Stratocaster, presentan un cuerpo sólido con doble cutaway, pero con contornos más agresivos para mayor comodidad. Su diseño a menudo incluye un acceso sin restricciones a los trastes más agudos y una configuración de pastillas más versátil, lo que las hace ideales para géneros como el rock y el metal. Su forma ha influido en numerosos fabricantes de guitarras, convirtiéndose en un estándar en la industria.</p>
+        </div>
+        </div>
+
+
+        <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/guitarra_lespaul.webp" class="img-fluid mx-auto d-block img-carrusel" alt="Les Paul">
+        <div class="carousel-caption caption-below p-0 m-0">
+            <h4><strong>Eléctrica - Les Paul</strong></h4>
+            <p class="fs-4 p-0 px-5 mx-5 m-0">La Gibson Les Paul es una guitarra eléctrica famosa y admirada en el ámbito musical e incluso fuera de él. Su lanzamiento fue en 1952 y se distingue por su cuerpo macizo y sus dos pastillas humbucker. Su sonido cálido y profundo la ha hecho la preferida de muchos artistas de blues y rock, entre ellos mitos como Jimmy Page y Slash.</p>
+        </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/guitarra_doblecut.webp" class="img-fluid mx-auto d-block img-carrusel" alt="oble Cut (SG)">
+        <div class="carousel-caption caption-below p-0 m-0">
+            <h4><strong>Eléctrica - Doble Cut (SG)</strong></h4>
+            <p class="fs-4 p-0 px-5 mx-5 m-0">Las guitarras de tipo doble cut engloban tipo de guitarras eléctricas conocida por su cuerpo delgado y ligero, y su mástil rápido y cómodo, con dos cutaway y hasta 24 trastes, muy apreciado por músicos de rock y metal.Hablamos de modelos míticos como la guitarra eléctrica SG de Ibanez, muy utilizada por grupos como AC/DC y otras guitarras como la Yamaha SG, Yamaha Revstar y la Tokai SG.</p>
+        </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/guitarra_v.webp" class="img-fluid mx-auto d-block img-carrusel" alt="Tipo V">
+        <div class="carousel-caption caption-below p-0 m-0">
+            <h4><strong>Eléctrica - Tipo V</strong></h4>
+            <p class="fs-4 p-0 px-5 mx-5 m-0">Su cuerpo tiene una forma aguda y simétrica que se asemeja a la letra «V», de ahí su nombre. Esta forma única entre todos los tipos de guitarras eléctricas no solo es estéticamente llamativa, sino que también permite un fácil acceso a los trastes superiores, lo que la hace popular entre los guitarristas de rock y metal.</p>
+        </div>
+        </div>
+
+        <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/guitarra_explorer.webp" class="img-fluid mx-auto d-block img-carrusel" alt="Explorer">
+        <div class="carousel-caption caption-below p-0 m-0">
+            <h4><strong>Eléctrica - Explorer</strong></h4>
+            <p class="fs-4 p-0 px-5 mx-5 m-0">La guitarra explorer es un tipo de guitarra eléctrica que se caracteriza por su forma angular y agresiva, inspirada en las naves espaciales. Fue lanzada por Gibson en 1958, pero no tuvo mucho éxito comercial hasta finales de los años setenta y ochenta, cuando fue adoptada por músicos de rock y metal como James Hetfield, Dave Mustaine y The Edge.</p>
+        </div>
+        </div>
+
+
+        <div class="carousel-item" data-bs-interval="10000">
+        <img src="img/guitarra_warlock.webp" class="img-fluid mx-auto d-block img-carrusel" alt="Warlock">
+        <div class="carousel-caption caption-below p-0 m-0">
+            <h4><strong>Eléctrica - Warlock</strong></h4>
+            <p class="fs-4 p-0 px-5 mx-5 m-0">Las guitarras Warlock se distinguen por su forma puntiaguda y violenta. Este tipo de guitarra eléctrica es apreciado en géneros como el heavy metal y el punk. Su diseño valiente y diferente, con su sonido fuerte, hacen de la Warlock una opción preferida para muchos artistas no convencionales.</p>
+        </div>
+        </div>
+
+  </div>
+
+  <div class="carousel-indicators custom-position">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="4" aria-label="Slide 5"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="5" aria-label="Slide 6"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="6" aria-label="Slide 7"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="7" aria-label="Slide 8"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="8" aria-label="Slide 9"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="9" aria-label="Slide 10"></button>
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+
+</div>
+
+</body>
+
+<footer>
+
+</footer>
+
+</html>

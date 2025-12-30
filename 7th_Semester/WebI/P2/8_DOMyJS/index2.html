@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8">
+    <title>Ejemplo JS y DOM</title>
+  </head>
+    <body>
+      <h1 id="titulo">Bienvenido</h1>
+      <button onclick="document.getElementById('miImagen').src = './focos/foco_encendido.png'">
+        Encender luz
+      </button>
+      <br>
+      <img id="miImagen" src="./focos/foco_apagado.png" alt="Foto dos, inicalmente pagada">
+      <br>
+      <button onclick="document.getElementById('miImagen').src = './focos/foco_apagado.png'">
+        Apagar luz
+      </button>
+    </body>
+</html>

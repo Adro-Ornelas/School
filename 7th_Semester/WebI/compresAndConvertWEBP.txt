@@ -1,0 +1,8 @@
+//#!/bin/bash
+
+
+// Compress and convert to 80%
+for file in *.{jpg,png,jpeg}; do magick "$file" -quality 80 "${file%.*}.webp"; done
+
+// COmpress and combert to 40%
+for file in *.{jpg,png,jpeg}; do magick "$file" -quality 40 "${file%.*}.webp"; done

@@ -1,0 +1,8 @@
+
+1 - Instalar Node.js
+2 - Dentro de projct folder:
+
+$ npm init -y
+$ npm install express mysql2 cors
+
+3 - node server.js

@@ -1,0 +1,27 @@
+body {
+  background-color: black;
+}
+h1 {
+  color: rgb(0, 127, 138);
+  border: 20px;
+  padding: 30px;
+  text-align: center;
+  background-color: beige;
+  border-radius: 100px;
+  margin: 50px 20px 30px 10px;
+}
+h2 {
+  color: rgb(170, 170, 226);
+  border: 2px;
+  padding: 30px;
+}
+h3 {
+  color: rgb(170, 170, 226);
+  border: 2px;
+  padding: 30px;
+}
+p {
+  color: blanchedalmond;
+  font-size: larger;
+  margin: -20px 50px;
+}

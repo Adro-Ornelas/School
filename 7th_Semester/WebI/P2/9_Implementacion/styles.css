@@ -1,0 +1,377 @@
+/* styles.css */
+
+.carrusel {
+    position: relative;
+    width: 100vw;
+    height: 300px;
+
+    margin: 60px auto;
+    margin-top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-carrusel {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    object-fit: scale-down;
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.3s ease;
+}
+
+.img-activa {
+    opacity: 1;
+    transform: scale(1.5);
+    z-index: 3;
+}
+
+.img-anterior {
+    opacity: 0.7;
+    transform: translateX(-420px) scale(0.5);
+    z-index: 2;
+}
+
+.img-siguiente {
+    opacity: 0.7;
+    transform: translateX(420px) scale(0.5);
+    z-index: 2;
+}
+
+.boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 50px;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 4;
+}
+
+#anterior {
+    left: 50px;
+}
+
+#siguiente {
+    right: 50px;
+}
+
+
+body {
+    margin: 0;
+}
+
+h1 {
+    color: white;
+    margin: 0px auto;
+
+    padding-top: 20px;
+
+    font-size: 40px;
+    text-align: center;
+}
+
+h2 {
+
+    margin: 0px auto;
+    font-size: 40px;
+    text-align: center;
+}
+
+.div-todo {
+    height: 10%;
+    width: 100%;
+}
+
+/* Estilo de la barra de navegación */
+.top-nav {
+    width: 100%;
+    height: 30px;
+}
+
+.top-nav ul {
+
+    background-color: #004141;
+    box-shadow: 0px 2px 5px #00b398;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+
+    /* Para que siempree esté en la parte superior */
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: auto;
+
+    /* border: 2px solid #006674; */
+}
+
+
+/* Estilo de los elementos (links) denro de la barra nav */
+.top-nav a {
+
+
+    display: block;
+    color: white;
+    padding: 14px 16px;
+    text-decoration: none;
+
+    font-size: 18px;
+    border-radius: 40px;
+    margin: 10px;
+
+    /* Transicion para el hover */
+    transition-duration: 0.2s;
+
+    box-shadow: 1px 1px 5px #00b398;
+}
+
+/* Estio de los links de la nav bajo el cursor */
+.top-nav a.main-a-nav {
+    background-color: rgb(255, 255, 255);
+    color: black;
+}
+
+.top-nav a:hover {
+    background-color: rgb(255, 255, 255);
+    color: black;
+
+}
+
+.img-profile {
+
+    width: 200px;
+    height: auto;
+    object-fit: cover;
+    border-radius: 100%;
+    margin: 20px;
+    margin-top: 60px;
+}
+
+.parrafo-principal {
+
+    margin-top: 50px;
+    margin-right: 10%;
+
+    padding: 30px;
+
+    border: 10px;
+    border-style: solid;
+    border-color: #1697c7;
+    border-radius: 8%;
+
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+
+/*
+    Flexbox para dividir la sección en columnas
+*/
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+
+/*
+    Todo div dentro de un flexbox se expande al máximo
+    Varios elementos se dividen el espacio equitativamente
+*/
+.wrapper>div {
+    flex: 1;
+}
+
+.wrapper-columna {
+    display: flex;
+    /*
+        Los elementos dentro de una columan se dibujan verticalmente
+        y tienen un espacio entre ellos que hace que uno se quede arriba (top)
+        y otro debajo (bottom)
+    */
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 10px 10px;
+}
+
+/*  Definición alternativa para subcomponentes de flexbox
+
+.column {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+*/
+
+#section-principal {
+
+    /*
+    Sección del tamaño de la ventana entera
+    */
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url("images/fondo_big.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0%;
+
+    /* Cuando es seleccionado desde la navBar */
+    scroll-margin-top: 60px;
+
+}
+
+#section-aboutme {
+
+    /*
+    Sección del tamaño de la ventana entera
+    */
+    height: 100vh;
+    width: 100vw;
+
+    background-image: url('./images/fondo_estrella.avif');
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* background-position: 0%; */
+
+    /* Cuando es seleccionado desde la navBar */
+    scroll-margin-top: 60px;
+
+
+
+}
+
+#section-detalle {
+    /*
+    Sección del tamaño de la ventana entera
+    */
+    height: 100vh;
+    width: 100vw;
+
+    background-image: linear-gradient(to top, #202121, #058585);
+
+    /* Cuando es seleccionado desde la navBar */
+    scroll-margin-top: 60px;
+}
+
+#section-portafolio {
+    /*
+    Sección del tamaño de la ventana entera
+    */
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, #202121, #058585);
+
+    /* Cuando es seleccionado desde la navBar */
+    scroll-margin-top: 60px;
+}
+
+.icon-fa {
+
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    margin-left: 40px;
+
+}
+
+.text-under-icon {
+
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+
+}
+
+ul {
+    padding-top: 100px;
+}
+
+ul,
+li {
+
+    color: white;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif;
+
+    margin: auto 2vw;
+
+}
+
+#phoneButton,
+#emailButton {
+    margin-top: 30px;
+    color: #45daff;
+}
+
+#phoneButton:hover,
+#emailButton:hover {
+
+    color: #4b6981;
+
+}
+
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #55eaff;
+    margin: 15% auto;
+    /* 15% from the top and centered */
+    padding: 20px;
+    border: 1px solid #000000;
+    width: fit-content;
+    /* Could be more or less, depending on screen size */
+    border-radius: 20px;
+
+    justify-content: right;
+}
+
+/* The Close Button */
+.close {
+
+    color: #000000;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    border-radius: 20px;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(255, 0, 0);
+    text-decoration: none;
+    cursor: pointer;
+}

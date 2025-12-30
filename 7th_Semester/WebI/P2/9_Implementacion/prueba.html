@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Carrusel centrado</title>
+<style>
+  body {
+    background: #f7f7f7;
+    font-family: sans-serif;
+  }
+
+  .carrusel {
+    position: relative;
+    width: 900px;
+    height: 300px;
+    margin: 60px auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+  }
+
+  .img-mosaico {
+    position: absolute;
+    width: 300px;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 10px;
+    opacity: 0;
+    transform: scale(0.8);
+    transition: all 0.5s ease;
+  }
+
+  .img-activa {
+    opacity: 1;
+    transform: scale(1);
+    z-index: 3;
+  }
+
+  .img-anterior {
+    opacity: 0.7;
+    transform: translateX(-320px) scale(0.9);
+    z-index: 2;
+  }
+
+  .img-siguiente {
+    opacity: 0.7;
+    transform: translateX(320px) scale(0.9);
+    z-index: 2;
+  }
+
+  .boton {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.5);
+    color: white;
+    border: none;
+    font-size: 2rem;
+    padding: 5px 10px;
+    cursor: pointer;
+    border-radius: 5px;
+    z-index: 4;
+  }
+
+  #anterior { left: 10px; }
+  #siguiente { right: 10px; }
+
+  #section-portafolio {
+    /*
+    Sección del tamaño de la ventana entera
+    */
+    height: 100vh;
+    width: 100vw;
+    background-image: linear-gradient(to bottom, #202121, #058585);
+    
+    /* Cuando es seleccionado desde la navBar */
+
+    overflow: hidden;
+}
+h1 {
+       color: white;
+    margin: 0px auto;
+    
+    padding-top: 20px;
+
+    font-size: 40px;
+    
+    text-align: center;
+}
+</style>
+</head>
+<body id="section-portafolio">
+<h1>Portafolio</h1>
+<div  class="carrusel ">
+    
+
+  <button id="anterior" class="boton">⟨</button>
+
+  <img src="images/vscode.png" class="img-mosaico" alt="Usando vs-code">
+  <img src="images/diagrama2.png" class="img-mosaico" alt="Diagrama eléctrico">
+  <img src="images/github.png" class="img-mosaico" alt="Github">
+  <img src="images/fracuency1.jpg" class="img-mosaico" alt="Aplicación movil Frecuency">
+  <img src="images/grafica.png" class="img-mosaico" alt="Gráfica de altutómetro">
+  <img src="images/sistema_minimo.jpg" class="img-mosaico" alt="Sistema mínimo">
+  <img src="images/arduino.png" class="img-mosaico" alt="Proyecto con arduino">
+  <img src="images/diagrama1.png" class="img-mosaico" alt="Diagrama eléctrico">
+
+  <button id="siguiente" class="boton">⟩</button>
+</div>
+
+<script>
+  const imagenes = document.querySelectorAll('.img-mosaico');
+  let indice = 0;
+
+  function actualizarCarrusel() {
+    imagenes.forEach(img => {
+      img.classList.remove('img-activa', 'img-anterior', 'img-siguiente');
+      img.style.zIndex = 1;
+    });
+
+    const total = imagenes.length;
+    const anterior = (indice - 1 + total) % total;
+    const siguiente = (indice + 1) % total;
+
+    imagenes[indice].classList.add('img-activa');
+    imagenes[anterior].classList.add('img-anterior');
+    imagenes[siguiente].classList.add('img-siguiente');
+  }
+
+  document.getElementById('siguiente').addEventListener('click', () => {
+    indice = (indice + 1) % imagenes.length;
+    actualizarCarrusel();
+  });
+
+  document.getElementById('anterior').addEventListener('click', () => {
+    indice = (indice - 1 + imagenes.length) % imagenes.length;
+    actualizarCarrusel();
+  });
+
+  actualizarCarrusel();
+</script>
+
+</body>
+</html>

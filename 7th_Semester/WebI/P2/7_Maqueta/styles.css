@@ -1,0 +1,173 @@
+/* styles.css */
+
+body {
+    margin: 0;
+}
+
+h1, h2 {
+    color: white;
+
+    color: white;
+    margin: 0px auto;
+
+    font-size: 40px;
+    
+    text-align: center;
+}
+
+.div-todo{
+    height: 10%;
+    width: 100%;
+}
+
+.img-profile {
+
+    width: 200px;
+    height: auto;
+	object-fit: cover;
+    border-radius: 100%;
+    margin: 20px;
+
+}
+
+.parrafo-principal {
+
+    margin-top: 30%;
+    margin-right: 10%;
+
+    padding: 30px;
+
+    border: 10px;
+    border-style: solid;
+    border-color: #1697c7;   
+    border-radius: 8%;
+
+    color: white;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bold;
+    font-size: xx-large;
+}
+
+
+/*
+    Flexbox para dividir la sección en columnas
+*/
+.wrapper {
+    display: flex;
+    flex-direction: row;
+}
+/*
+    Todo div dentro de un flexbox se expande al máximo
+    Varios elementos se dividen el espacio equitativamente
+*/    
+.wrapper > div {
+    flex: 1;
+}
+.wrapper-columna {
+    display: flex;
+    /*
+        Los elementos dentro de una columan se dibujan verticalmente
+        y tienen un espacio entre ellos que hace que uno se quede arriba (top)
+        y otro debajo (bottom)
+    */
+    flex-direction: column;
+    justify-content: space-between;
+
+    margin: 10px 10px;
+}
+
+/*  Definición alternativa para subcomponentes de flexbox
+
+.column {
+    flex: 1;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
+*/
+
+.section-principal {
+
+    /*
+    Sección del tamaño de la ventana entera
+    */
+    height: 100vh;
+    width: 100vw;
+
+    background-image:url("images/fondo_big.webp");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: 0%;
+
+}
+
+.section-detalle {
+
+
+    /*
+    Sección del tamaño de la ventana entera
+    */
+    height: 100vh;
+    width: 100vw;
+
+    background-image: linear-gradient(to bottom, #202121, #058585);
+}
+
+.section-portafolio {
+    /*
+    Sección del tamaño de la ventana entera
+    */
+    height: 100vh;
+    width: 100vw;
+
+    background-image: linear-gradient(to top, #202121, #058585);
+    
+}
+
+
+
+.icon-fa {
+
+    font-size: 80px;
+    color: rgb(255, 255, 255);
+    margin-left: 40px;
+    
+}
+
+.img-mosaico {
+    height: auto;
+    width: 100%;
+
+    object-fit: cover;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+.img-mosaico.fit{
+    /*
+        Para que una imagen muy grande entre en el espacio
+    */
+    height: 200px;
+}
+
+.text-under-icon {
+
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+
+}
+
+ul {
+    padding-top: 100px;
+}
+
+ul, li {
+
+    color: white;
+    font-size: 23px;
+    font-family: Arial, Helvetica, sans-serif ;
+
+    margin: auto 2vw;
+
+}
