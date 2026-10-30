@@ -9,7 +9,7 @@ int main()
 	long int factorial = 1;
 	do {
 		cout << "\n"
-			"[A]\tSerie\n"
+			"[A]\tIdentificar y sumar primos\n"
 			"[B]\tFactorial\n"
 			"[S]\tSalir" << endl;
 		cout << "Selecciona una opcion: ";
